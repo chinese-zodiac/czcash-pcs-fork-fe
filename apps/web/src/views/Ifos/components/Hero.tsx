@@ -1,12 +1,12 @@
-import { styled } from 'styled-components'
-import { useTranslation } from '@pancakeswap/localization'
-import Image from 'next/image'
-import { Box, Button, Container, Flex, Heading, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
-import { useRouter } from 'next/router'
-import { useActiveChainId } from 'hooks/useActiveChainId'
-import { useMemo } from 'react'
 import { isIfoSupported } from '@pancakeswap/ifos'
+import { useTranslation } from '@pancakeswap/localization'
 import { ChainId } from '@pancakeswap/sdk'
+import { Box, Button, Container, Flex, Heading, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { useActiveChainId } from 'hooks/useActiveChainId'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+import { useMemo } from 'react'
+import { styled } from 'styled-components'
 
 import { getChainBasedImageUrl } from '../helpers'
 
@@ -15,8 +15,8 @@ const StyledHero = styled(Box)`
   overflow: hidden;
   background: ${({ theme }) =>
     theme.isDark
-      ? 'linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)'
-      : 'linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)'};
+      ? 'linear-gradient(139.73deg, #5c3131 0%, #4a1111 100%)'
+      : 'linear-gradient(139.73deg, #E6FDFF 0%, #fffbe5 100%)'};
 `
 
 const BunnyContainer = styled(Box)`

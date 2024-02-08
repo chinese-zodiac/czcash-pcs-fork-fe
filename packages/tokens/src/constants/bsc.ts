@@ -1,7 +1,7 @@
 import { ChainId } from '@pancakeswap/chains'
 import { ERC20Token, WBNB } from '@pancakeswap/sdk'
 
-import { BUSD_BSC, CAKE_MAINNET, USDT_BSC } from './common'
+import { BUSD_BSC, CAKE_MAINNET, CZRED_MAINNET, USDT_BSC } from './common'
 
 export const bscTokens = {
   wbnb: WBNB[ChainId.BSC],
@@ -15,6 +15,15 @@ export const bscTokens = {
     'https://www.binance.com/',
   ),
   cake: CAKE_MAINNET,
+  czred: CZRED_MAINNET,
+  czusd: new ERC20Token(
+    ChainId.BSC,
+    '0xE68b79e51bf826534Ff37AA9CeE71a3842ee9c70',
+    18,
+    'CZUSD',
+    'CZodiac USD',
+    'https://czodiac.com/',
+  ),
   gmi: new ERC20Token(
     ChainId.BSC,
     '0x93D8d25E3C9A847a5Da79F79ecaC89461FEcA846',

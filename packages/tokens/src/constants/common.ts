@@ -10,6 +10,15 @@ export const CAKE_MAINNET = new ERC20Token(
   'https://pancakeswap.finance/',
 )
 
+export const CZRED_MAINNET = new ERC20Token(
+  ChainId.BSC,
+  '0x5cd0c2C744caF04cda258Efc6558A3Ed3defE97b',
+  18,
+  'CZR',
+  'CZRED',
+  'https://czodiac.com/',
+)
+
 export const CAKE_TESTNET = new ERC20Token(
   ChainId.BSC_TESTNET,
   '0x8d008B313C1d6C7fE2982F62d32Da7507cF43551',
@@ -119,6 +128,10 @@ export const BUSD = {
     'BUSD',
     'Binance USD',
   ),
+}
+
+export const CZRED = {
+  [ChainId.BSC]: CZRED_MAINNET,
 }
 
 export const CAKE = {

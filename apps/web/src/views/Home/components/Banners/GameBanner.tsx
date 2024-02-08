@@ -1,11 +1,11 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Box, Flex, Link, OpenNewIcon, Text, useMatchBreakpoints, Button } from '@pancakeswap/uikit'
+import { Box, Button, Flex, Link, OpenNewIcon, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { ASSET_CDN } from 'config/constants/endpoints'
 import Image from 'next/legacy/image'
 import { memo } from 'react'
-import { styled, keyframes } from 'styled-components'
+import { keyframes, styled } from 'styled-components'
 import * as S from './Styled'
-import { gameDesktopBg, gameMobileBunny, gameDesktopBunny, gameCube, gameText, gameMobileText } from './images'
+import { gameCube, gameDesktopBg, gameDesktopBunny, gameMobileBunny, gameMobileText, gameText } from './images'
 
 const flyingAnim = keyframes`
   from {
@@ -123,7 +123,7 @@ const GameBanner = () => {
   return (
     <S.Wrapper
       style={{
-        background: `linear-gradient(140deg, #313D5C 0%, #3D2A54 100%)`,
+        background: `linear-gradient(140deg, #5c3131 0%, #4a1111 100%)`,
       }}
     >
       <S.Inner>

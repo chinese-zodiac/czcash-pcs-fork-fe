@@ -5,7 +5,7 @@ import { SvgProps } from "../types";
 const Icon: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
   return (
     <Svg viewBox="0 0 96 96" {...props}>
-      <circle cx={48} cy={48} r={48} fill="#53DEE9" />
+      <circle cx={48} cy={48} r={48} fill="#e9d753" />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -26,8 +26,8 @@ const Icon: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
       />
       <defs>
         <linearGradient id="paint0_linear_10493" x1={48} y1={0} x2={48} y2={96} gradientUnits="userSpaceOnUse">
-          <stop stopColor="#53DEE9" />
-          <stop offset={1} stopColor="#1FC7D4" />
+          <stop stopColor="#e9d753" />
+          <stop offset={1} stopColor="#d4851f" />
         </linearGradient>
       </defs>
     </Svg>

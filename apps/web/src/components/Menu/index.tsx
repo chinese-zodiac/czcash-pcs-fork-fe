@@ -10,7 +10,7 @@ import useTheme from 'hooks/useTheme'
 import { IdType } from 'hooks/useUserIsUsCitizenAcknowledgement'
 import { useWebNotifications } from 'hooks/useWebNotifications'
 import { useRouter } from 'next/router'
-import { Suspense, lazy, useMemo } from 'react'
+import { lazy, useMemo } from 'react'
 import GlobalSettings from './GlobalSettings'
 import { SettingsMode } from './GlobalSettings/types'
 import UserMenu from './UserMenu'
@@ -40,8 +40,12 @@ const Menu = (props) => {
 
   const menuItems = useMenuItems(onUSCitizenModalPresent)
 
-  const activeMenuItem = getActiveMenuItem({ menuConfig: menuItems, pathname })
-  const activeSubMenuItem = getActiveSubMenuItem({ menuItem: activeMenuItem, pathname })
+  let activeMenuItem = getActiveMenuItem({ menuConfig: menuItems, pathname })
+  let activeSubMenuItem = getActiveSubMenuItem({ menuItem: activeMenuItem, pathname })
+  if (!pathname || pathname === '/') {
+    activeMenuItem = menuItems.find((val) => val.label === 'Trade')
+    activeSubMenuItem = activeMenuItem?.items?.find((val) => val.label === 'Swap')
+  }
 
   const toggleTheme = useMemo(() => {
     return () => setTheme(isDark ? 'light' : 'dark')
@@ -50,6 +54,7 @@ const Menu = (props) => {
   const getFooterLinks = useMemo(() => {
     return footerLinks(t)
   }, [t])
+
   return (
     <>
       <UikitMenu
@@ -57,11 +62,11 @@ const Menu = (props) => {
         rightSide={
           <>
             <GlobalSettings mode={SettingsMode.GLOBAL} />
-            {enabled && (
+            {/*enabled && (
               <Suspense fallback={null}>
                 <Notifications />
               </Suspense>
-            )}
+            )*/}
             <NetworkSwitcher />
             <UserMenu />
           </>
@@ -79,7 +84,7 @@ const Menu = (props) => {
         activeItem={activeMenuItem?.href}
         activeSubItem={activeSubMenuItem?.href}
         buyCakeLabel={t('Buy CZRED')}
-        buyCakeLink="https://pancakeswap.finance/swap?outputCurrency=0x5cd0c2C744caF04cda258Efc6558A3Ed3defE97b&chainId=56"
+        buyCakeLink="https://cz.cash/swap?outputCurrency=0x5cd0c2C744caF04cda258Efc6558A3Ed3defE97b&chainId=56"
         {...props}
       />
     </>

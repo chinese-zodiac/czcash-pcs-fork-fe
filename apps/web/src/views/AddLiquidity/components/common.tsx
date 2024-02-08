@@ -1,12 +1,12 @@
-import React from 'react'
-import { Currency, Fraction, Percent, CurrencyAmount, Token } from '@pancakeswap/sdk'
-import { Text, useTooltip, TooltipText, Box, Flex, Svg, SvgProps, AutoColumn } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
-import { styled } from 'styled-components'
-import { AutoRow, RowBetween } from 'components/Layout/Row'
-import { Field } from 'state/burn/actions'
-import { DoubleCurrencyLogo, CurrencyLogo } from 'components/Logo'
+import { Currency, CurrencyAmount, Fraction, Percent, Token } from '@pancakeswap/sdk'
+import { AutoColumn, Box, Flex, Svg, SvgProps, Text, TooltipText, useTooltip } from '@pancakeswap/uikit'
 import { GreyCard } from 'components/Card'
+import { AutoRow, RowBetween } from 'components/Layout/Row'
+import { CurrencyLogo, DoubleCurrencyLogo } from 'components/Logo'
+import React from 'react'
+import { Field } from 'state/burn/actions'
+import { styled } from 'styled-components'
 import { getLPSymbol } from 'utils/getLpSymbol'
 
 const Dot = styled(Box)<{ scale?: 'sm' | 'md' }>`
@@ -15,10 +15,10 @@ const Dot = styled(Box)<{ scale?: 'sm' | 'md' }>`
   border-radius: 50%;
 `
 
-const CircleSvg = ({ percent = 1, stroke = '#1FC7D4', ...props }: SvgProps & { percent?: number; stroke?: string }) => (
+const CircleSvg = ({ percent = 1, stroke = '#d4851f', ...props }: SvgProps & { percent?: number; stroke?: string }) => (
   <Svg width="60px" height="60px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <g filter="url(#filter0_i_1147_113741)">
-      <circle r="10" cx="10" cy="10" fill="#7645D9" />
+      <circle r="10" cx="10" cy="10" fill="#b91313" />
       <circle
         r="5"
         cx="10"

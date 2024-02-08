@@ -36,7 +36,7 @@ const borderBoxAnimation = css`
     transition: transform ${COVER_TRANSITION_TIMES}s ease-in-out ${LINE_TRANSITION_TIMES}s;
     background: ${({ theme }) =>
       theme.isDark
-        ? 'linear-gradient(90deg, #08060B 85%, rgba(8, 6, 11, 0.00) 100%)'
+        ? 'linear-gradient(90deg, #292323 85%, rgba(8, 6, 11, 0.00) 100%)'
         : 'linear-gradient(90deg, #faf9fa 85%, rgba(250, 249, 250, 0) 100%)'};
     ${({ theme }) => theme.mediaQueries.lg} {
       top: 0;
@@ -46,7 +46,7 @@ const borderBoxAnimation = css`
       height: 70%;
       background: ${({ theme }) =>
         theme.isDark
-          ? 'linear-gradient(180deg, #08060B 85%, rgba(8, 6, 11, 0.00) 100%)'
+          ? 'linear-gradient(180deg, #292323 85%, rgba(8, 6, 11, 0.00) 100%)'
           : 'linear-gradient(180deg, #faf9fa 85%, rgba(250, 249, 250, 0) 100%)'};
     }
   }
@@ -61,7 +61,7 @@ const borderBoxAnimation = css`
     height: 110%;
     background: ${({ theme }) =>
       theme.isDark
-        ? 'linear-gradient(90deg, rgba(8, 6, 11, 0.00) 0%, #08060B 15%)'
+        ? 'linear-gradient(90deg, rgba(8, 6, 11, 0.00) 0%, #292323 15%)'
         : 'linear-gradient(90deg, rgba(250, 249, 250, 0.00) 0%, #FAF9FA 15%)'};
     transition: transform ${COVER_TRANSITION_TIMES}s ease-in-out ${LINE_TRANSITION_TIMES}s;
     ${({ theme }) => theme.mediaQueries.lg} {
@@ -72,7 +72,7 @@ const borderBoxAnimation = css`
       bottom: 0;
       background: ${({ theme }) =>
         theme.isDark
-          ? 'linear-gradient(180deg, rgba(8, 6, 11, 0.00) 0%, #08060B 15%)'
+          ? 'linear-gradient(180deg, rgba(8, 6, 11, 0.00) 0%, #292323 15%)'
           : 'linear-gradient(180deg, rgba(250, 249, 250, 0.00) 0%, #FAF9FA 15%)'};
     }
   }
@@ -404,7 +404,7 @@ const CakeSection: React.FC = () => {
           fontWeight={600}
           display="inline"
           marginLeft={10}
-          color={theme.isDark ? '#A881FC' : theme.colors.secondary}
+          color={theme.isDark ? '#ed2525' : theme.colors.secondary}
           fontSize={['32px', null, null, '40px']}
           lineHeight="110%"
         >
@@ -415,7 +415,7 @@ const CakeSection: React.FC = () => {
         <Text
           fontSize={['16px', null, null, '20px']}
           fontWeight={600}
-          color={theme.isDark ? '#B8ADD2' : '#7A6EAA'}
+          color={theme.isDark ? '#e7d1d1' : '#ab5959'}
           textAlign="center"
           lineHeight="110%"
           padding="0px 16px"
@@ -426,10 +426,10 @@ const CakeSection: React.FC = () => {
         </Text>
       </Flex>
       <Flex justifyContent="center" style={{ gap: 14 }}>
-        <Link href="https://pancakeswap.finance/swap?outputCurrency=0x5cd0c2C744caF04cda258Efc6558A3Ed3defE97b&chainId=56">
+        <Link href="https://cz.cash/swap?outputCurrency=0x5cd0c2C744caF04cda258Efc6558A3Ed3defE97b&chainId=56">
           <Button variant="primary">{t('Buy CZRED')}</Button>
         </Link>
-        <Link href="https://docs.pancakeswap.finance/governance-and-tokenomics/cake-tokenomics">
+        <Link href="https://docs.czodiac.com/czodiac-litepaper/tokens/deflationary-czred">
           <Button pl="0" endIcon={<OpenNewIcon color="primary" />} variant="text">
             {t('Learn')}
           </Button>

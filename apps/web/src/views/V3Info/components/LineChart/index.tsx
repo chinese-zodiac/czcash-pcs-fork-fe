@@ -39,7 +39,7 @@ export type LineChartProps = {
 
 const LineChart = ({
   data,
-  color = '#1FC7D4',
+  color = '#d4851f',
   setValue,
   setLabel,
   topLeft,
@@ -52,7 +52,7 @@ const LineChart = ({
 }: LineChartProps) => {
   // theming
   const { theme } = useTheme()
-  const textColor = theme.isDark ? '$F4EEFF' : '#280D5F'
+  const textColor = theme.isDark ? '$F4EEFF' : '#5f0d0d'
   // chart pointer
   const chartRef = useRef<HTMLDivElement>(null)
   const [chartCreated, setChart] = useState<IChartApi | undefined>()
@@ -151,7 +151,7 @@ const LineChart = ({
       const series = chartCreated.addAreaSeries({
         lineColor: color,
         topColor: darken(0.36, color),
-        bottomColor: theme.isDark ? '#08060B' : '#FAF9FA',
+        bottomColor: theme.isDark ? '#292323' : '#FAF9FA',
         lineWidth: 2,
         priceLineVisible: false,
       })

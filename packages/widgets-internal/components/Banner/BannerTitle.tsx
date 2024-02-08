@@ -23,7 +23,7 @@ type Variant = {
 
 const variants: { [key in VariantTypes]: Variant } = {
   purple: {
-    color: "#7645D9",
+    color: "#b91313",
     strokeColor: "#ffffff",
     strokeSize: 2,
     fontSize: 28,

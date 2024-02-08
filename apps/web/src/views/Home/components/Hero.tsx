@@ -236,14 +236,14 @@ const Hero = () => {
           </Text>
           <Text
             mb="24px"
-            color={theme.isDark ? '#B8ADD2' : '#7A6EAA'}
+            color={theme.isDark ? '#e7d1d1' : '#ab5959'}
             maxWidth={600}
             fontSize={['20px', '20px', null, '24px']}
             textAlign={isMobile ? 'center' : 'left'}
             lineHeight="110%"
             fontWeight={600}
           >
-            {t('Trade, earn, and own crypto on the all-in-one multichain DEX')}
+            {t('Trade the best tokens on BSC with the highest liquidity dex')}
           </Text>
 
           <Flex justifyContent={isMobile || isMd ? 'center' : 'start'}>

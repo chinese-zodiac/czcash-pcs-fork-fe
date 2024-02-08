@@ -122,7 +122,7 @@ const Header = styled.div`
   font-size: 16px;
   line-height: 101%;
   font-feature-settings: 'liga' off;
-  color: #280d5f;
+  color: #5f0d0d;
   margin: 5px 0px;
   ${({ theme }) => theme.mediaQueries.md} {
     font-size: 24px;
@@ -154,7 +154,7 @@ const StyledSubheading = styled.div`
     background-clip: text;
     content: attr(data-text);
     text-shadow: 1.27551px 1.27551px 1.02041px rgba(0, 0, 0, 0.2);
-    -webkit-text-stroke: 5px #7645d9;
+    -webkit-text-stroke: 5px #b91313;
     position: absolute;
     left: 0;
     top: 0;

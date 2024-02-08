@@ -61,7 +61,7 @@ const HeadingRow = ({ quote, quotesExist }: { quote: ProviderQuote; quotesExist:
 
   const renderQuoteDetails = () => (
     <>
-      <Text ml="4px" fontSize="18px" color="#7A6EAA" fontWeight="bold">
+      <Text ml="4px" fontSize="18px" color="#ab5959" fontWeight="bold">
         {formatLocaleNumber({
           number: quote.quote,
           locale,

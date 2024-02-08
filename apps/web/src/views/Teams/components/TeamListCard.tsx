@@ -1,8 +1,8 @@
-import { styled, DefaultTheme } from 'styled-components'
-import Link from 'next/link'
-import { Button, Card, CommunityIcon, Flex, Heading, PrizeIcon, Text } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
+import { Button, Card, CommunityIcon, Flex, Heading, PrizeIcon, Text } from '@pancakeswap/uikit'
 import { Team } from 'config/constants/types'
+import Link from 'next/link'
+import { DefaultTheme, styled } from 'styled-components'
 
 interface TeamCardProps {
   rank: number
@@ -14,7 +14,7 @@ const getBackground = (theme: DefaultTheme) => {
     return 'linear-gradient(139.73deg, #142339 0%, #24243D 47.4%, #37273F 100%)'
   }
 
-  return 'linear-gradient(139.73deg, #E6FDFF 0%, #EFF4F5 46.87%, #F3EFFF 100%)'
+  return 'linear-gradient(139.73deg, #E6FDFF 0%, #EFF4F5 46.87%, #fffbe5 100%)'
 }
 
 const TeamRank = styled.div`

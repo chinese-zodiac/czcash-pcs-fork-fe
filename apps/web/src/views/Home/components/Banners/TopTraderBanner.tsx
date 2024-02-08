@@ -1,14 +1,14 @@
 import { useTranslation } from '@pancakeswap/localization'
 import {
+  BackgroundGraphic,
   BannerContainer,
   BannerGraphics,
   BannerMain,
   BannerTitle,
   FloatingGraphic,
+  GraphicDetail,
   LinkExternalAction,
   PancakeSwapBadge,
-  BackgroundGraphic,
-  GraphicDetail,
 } from '@pancakeswap/widgets-internal'
 
 import { ASSET_CDN } from 'config/constants/endpoints'
@@ -41,7 +41,7 @@ export function TopTraderBanner() {
         actions={
           <LinkExternalAction
             href="https://pancakeswap.finance/trading-reward/top-traders?utm_source=homepage&utm_medium=herobanner&utm_id=toptradersJan"
-            color="#7645D9"
+            color="#b91313"
           >
             {t('Join Now')}
           </LinkExternalAction>

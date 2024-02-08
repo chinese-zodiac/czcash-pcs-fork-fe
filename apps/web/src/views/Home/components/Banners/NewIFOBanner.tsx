@@ -96,7 +96,7 @@ const StyledSubheading = styled.div`
   margin-left: 3px;
   margin-top: 5px;
   margin-bottom: 5px;
-  color: #08060b;
+  color: #292323;
   ${({ theme }) => theme.mediaQueries.md} {
     font-size: 40px;
     padding-left: 0px;
@@ -117,7 +117,7 @@ export const CountDownWrapper = styled.div`
   font-style: normal;
   font-weight: 600;
   line-height: 90%;
-  color: #08060b;
+  color: #292323;
   padding: 6px;
   border-radius: 8px;
   margin-top: 5px;

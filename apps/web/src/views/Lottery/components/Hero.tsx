@@ -1,10 +1,10 @@
-import { styled, keyframes } from 'styled-components'
-import { Box, Flex, Heading, Skeleton, Balance } from '@pancakeswap/uikit'
-import { LotteryStatus } from 'config/constants/types'
 import { useTranslation } from '@pancakeswap/localization'
+import { Balance, Box, Flex, Heading, Skeleton } from '@pancakeswap/uikit'
+import { getBalanceNumber } from '@pancakeswap/utils/formatBalance'
+import { LotteryStatus } from 'config/constants/types'
 import { useCakePrice } from 'hooks/useCakePrice'
 import { useLottery } from 'state/lottery/hooks'
-import { getBalanceNumber } from '@pancakeswap/utils/formatBalance'
+import { keyframes, styled } from 'styled-components'
 import { TicketPurchaseCard } from '../svgs'
 import BuyTicketsButton from './BuyTicketsButton'
 
@@ -80,7 +80,7 @@ const PrizeTotalBalance = styled(Balance)`
 
 const StyledBuyTicketButton = styled(BuyTicketsButton)<{ disabled: boolean }>`
   background: ${({ theme, disabled }) =>
-    disabled ? theme.colors.disabled : 'linear-gradient(180deg, #7645d9 0%, #452a7a 100%)'};
+    disabled ? theme.colors.disabled : 'linear-gradient(180deg, #b91313 0%, #452a7a 100%)'};
   width: 200px;
   ${({ theme }) => theme.mediaQueries.xs} {
     width: 240px;

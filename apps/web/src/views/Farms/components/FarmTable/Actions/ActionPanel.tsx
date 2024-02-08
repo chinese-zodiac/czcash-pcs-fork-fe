@@ -184,8 +184,8 @@ const MerklWarning: React.FC<{
 }> = ({ merklLink, hasFarm }) => {
   return (
     <StyleMerklWarning>
-      <Message variant="primary" icon={<VerifiedIcon color="#7645D9" />}>
-        <MessageText color="#7645D9">
+      <Message variant="primary" icon={<VerifiedIcon color="#b91313" />}>
+        <MessageText color="#b91313">
           <MerklNotice.Content hasFarm={hasFarm} merklLink={merklLink} linkColor="currentColor" />
         </MessageText>
       </Message>

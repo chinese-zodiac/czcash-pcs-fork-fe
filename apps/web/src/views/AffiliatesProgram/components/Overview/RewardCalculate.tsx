@@ -1,7 +1,7 @@
-import { Flex, Text, Button, Box, PageSection, Link } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
-import { styled } from 'styled-components'
+import { Box, Button, Flex, Link, PageSection, Text } from '@pancakeswap/uikit'
 import useTheme from 'hooks/useTheme'
+import { styled } from 'styled-components'
 // import Calculator from 'views/AffiliatesProgram/components/Overview/Calculator'
 import CommissionStructure from 'views/AffiliatesProgram/components/Overview/CommissionStructure'
 import { floatingStarsLeft, floatingStarsRight } from 'views/Lottery/components/Hero'
@@ -65,7 +65,7 @@ const RewardCalculate = () => {
       background={theme.colors.gradientBubblegum}
       clipFill={{
         light: 'linear-gradient(139.73deg, #E2FCFF 0%, #EBF3FF 100%)',
-        dark: 'linear-gradient(139.73deg, #313D5C 0%, #383258 100%)',
+        dark: 'linear-gradient(139.73deg, #5c3131 0%, #383258 100%)',
       }}
       innerProps={{ style: { padding: '0 16px' } }}
     >

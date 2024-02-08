@@ -119,7 +119,7 @@ const Header = styled.div`
     background-clip: text;
     content: attr(data-text);
     text-shadow: 1.27551px 1.27551px 1.02041px rgba(0, 0, 0, 0.2);
-    -webkit-text-stroke: 3px #7645d9;
+    -webkit-text-stroke: 3px #b91313;
     position: absolute;
     left: 0;
     top: 0;
@@ -137,7 +137,7 @@ const Header = styled.div`
     letter-spacing: 0.28px;
 
     &::after {
-      -webkit-text-stroke: 6px #7645d9;
+      -webkit-text-stroke: 6px #b91313;
     }
   }
 `
@@ -178,18 +178,18 @@ const VeCakeBanner = () => {
           <Box>
             {isDesktop ? (
               <Flex mt="8px">
-                <SubText color="#7645D9" mr="4px">
+                <SubText color="#b91313" mr="4px">
                   {t('Introducing')}
                 </SubText>
 
-                <SubText color="#280D5F" mr="4px">
+                <SubText color="#5f0d0d" mr="4px">
                   {t('Gauges Voting')}
                 </SubText>
 
-                <SubText color="#7645D9" mr="4px">
+                <SubText color="#b91313" mr="4px">
                   {t('and')}
                 </SubText>
-                <SubText color="#280D5F" mr="4px">
+                <SubText color="#5f0d0d" mr="4px">
                   {t('veCAKE')}
                 </SubText>
               </Flex>

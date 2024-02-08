@@ -6,8 +6,8 @@ import { Autoplay, EffectFade, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import CommunitySummary, { sharedCss } from './CommunitySummary'
 import { CommunityTags } from './CommunityTags'
-import { BlogCard, TwitterCards } from './TwitterCards'
 import { LeftBottomBox, RightBottomBox } from './ImagesOnBg'
+import { BlogCard, TwitterCards } from './TwitterCards'
 
 const TransparentFrame = styled.div<{ isDark: boolean }>`
   position: relative;
@@ -48,7 +48,7 @@ const StyledSwiper = styled(Swiper)`
         border-radius: 0px 4px 4px 0px;
       }
       &.swiper-pagination-bullet-active {
-        background-color: #7645d9;
+        background-color: #b91313;
       }
     }
   }
@@ -86,7 +86,7 @@ const CommunitySection = () => {
             mb="12px"
           >
             <Heading scale="xl">{t('Join our')}</Heading>{' '}
-            <Heading color={theme.isDark ? '#A881FC' : theme.colors.secondary} scale="xl">
+            <Heading color={theme.isDark ? '#ed2525' : theme.colors.secondary} scale="xl">
               {t('Community')}
             </Heading>
           </Flex>

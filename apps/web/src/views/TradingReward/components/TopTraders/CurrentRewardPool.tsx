@@ -48,7 +48,7 @@ const StyledHeading = styled(Text)`
 
 const StyledButton = styled(Button)`
   background: linear-gradient(180deg, #fcc631 0%, #ff9d00 100%);
-  color: #08060b;
+  color: #292323;
 `
 
 const Decorations = styled(Box)`

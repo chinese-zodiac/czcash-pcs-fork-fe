@@ -1,17 +1,17 @@
+import { useTranslation } from '@pancakeswap/localization'
+import { Box, Button, Flex, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { formatNumber } from '@pancakeswap/utils/formatBalance'
+import getTimePeriods from '@pancakeswap/utils/getTimePeriods'
+import { useCakePrice } from 'hooks/useCakePrice'
+import Link from 'next/link'
 import { useMemo } from 'react'
 import { styled } from 'styled-components'
-import { Box, Flex, Text, Button, useMatchBreakpoints } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
-import getTimePeriods from '@pancakeswap/utils/getTimePeriods'
-import { formatNumber } from '@pancakeswap/utils/formatBalance'
-import { timeFormat } from 'views/TradingReward/utils/timeFormat'
-import { Incentives, RewardInfo } from 'views/TradingReward/hooks/useAllTradingRewardPair'
-import { CampaignIdInfoDetail } from 'views/TradingReward/hooks/useCampaignIdInfo'
-import Link from 'next/link'
-import { useCakePrice } from 'hooks/useCakePrice'
-import useRewardInCake from 'views/TradingReward/hooks/useRewardInCake'
 import TextComponent from 'views/TradingReward/components/TopTraders/YourTradingReward/TextComponent'
 import TimeText from 'views/TradingReward/components/TopTraders/YourTradingReward/TimeText'
+import { Incentives, RewardInfo } from 'views/TradingReward/hooks/useAllTradingRewardPair'
+import { CampaignIdInfoDetail } from 'views/TradingReward/hooks/useCampaignIdInfo'
+import useRewardInCake from 'views/TradingReward/hooks/useRewardInCake'
+import { timeFormat } from 'views/TradingReward/utils/timeFormat'
 
 const Container = styled(Flex)`
   position: relative;
@@ -20,7 +20,7 @@ const Container = styled(Flex)`
   margin: auto;
   flex-direction: column;
   border-radius: 32px;
-  background: linear-gradient(180deg, #7645d9 0%, #5121b1 100%);
+  background: linear-gradient(180deg, #b91313 0%, #5121b1 100%);
   z-index: 1;
 
   ${({ theme }) => theme.mediaQueries.xxl} {
@@ -49,7 +49,7 @@ const StyledHeading = styled(Text)`
 
 const StyledButton = styled(Button)`
   background: linear-gradient(180deg, #fcc631 0%, #ff9d00 100%);
-  color: #08060b;
+  color: #292323;
 `
 
 const Decorations = styled(Box)`

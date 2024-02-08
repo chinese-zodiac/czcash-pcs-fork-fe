@@ -1224,7 +1224,7 @@ exports[`renders correctly 1`] = `
                 <circle
                   cx="48"
                   cy="48"
-                  fill="#53DEE9"
+                  fill="#e9d753"
                   r="48"
                 />
                 <path
@@ -1255,11 +1255,11 @@ exports[`renders correctly 1`] = `
                     y2="96"
                   >
                     <stop
-                      stop-color="#53DEE9"
+                      stop-color="#e9d753"
                     />
                     <stop
                       offset="1"
-                      stop-color="#1FC7D4"
+                      stop-color="#d4851f"
                     />
                   </lineargradient>
                 </defs>
@@ -3224,7 +3224,7 @@ exports[`renders correctly 1`] = `
                 <circle
                   cx="48"
                   cy="48"
-                  fill="#53DEE9"
+                  fill="#e9d753"
                   r="48"
                 />
                 <path
@@ -3255,11 +3255,11 @@ exports[`renders correctly 1`] = `
                     y2="96"
                   >
                     <stop
-                      stop-color="#53DEE9"
+                      stop-color="#e9d753"
                     />
                     <stop
                       offset="1"
-                      stop-color="#1FC7D4"
+                      stop-color="#d4851f"
                     />
                   </lineargradient>
                 </defs>
