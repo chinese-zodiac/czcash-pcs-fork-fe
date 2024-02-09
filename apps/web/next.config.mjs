@@ -146,38 +146,8 @@ const config = {
         permanent: true,
       },
       {
-        source: '/farms/archived',
-        destination: '/farms/history',
-        permanent: true,
-      },
-      {
         source: '/pool',
         destination: '/liquidity',
-        permanent: true,
-      },
-      {
-        source: '/staking',
-        destination: '/pools',
-        permanent: true,
-      },
-      {
-        source: '/syrup',
-        destination: '/pools',
-        permanent: true,
-      },
-      {
-        source: '/collectibles',
-        destination: '/nfts',
-        permanent: true,
-      },
-      {
-        source: '/info/pools',
-        destination: '/info/pairs',
-        permanent: true,
-      },
-      {
-        source: '/info/pools/:address',
-        destination: '/info/pairs/:address',
         permanent: true,
       },
       {
@@ -187,13 +157,8 @@ const config = {
       },
       {
         source: '/images/tokens/:address',
-        destination: 'https://storage.czodiac.com/plasticdigits-team-bucket/tokens/:address',
+        destination: 'https://pancakeswap.finance/images/tokens/:address',
         permanent: false,
-      },
-      {
-        source: '/trading-reward',
-        destination: '/trading-reward/top-traders',
-        permanent: true,
       },
     ]
   },
