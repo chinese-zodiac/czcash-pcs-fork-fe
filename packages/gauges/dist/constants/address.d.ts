@@ -1,0 +1,11 @@
+export declare const GAUGES: "0xf81953dC234cdEf1D6D0d3ef61b232C6bCbF9aeF";
+export declare const GAUGES_TESTNET: "0x357b01894b21787B41A8FA4DCaFE92293470FaD9";
+export declare const GAUGES_ADDRESS: {
+    56: "0xf81953dC234cdEf1D6D0d3ef61b232C6bCbF9aeF";
+    97: "0x357b01894b21787B41A8FA4DCaFE92293470FaD9";
+};
+export declare const GAUGES_CALC_ADDRESS: {
+    56: "0x94F8cBa8712B3E72C9BF8Ba4d6619Ac9046FE695";
+    97: "0x88B02E6238fa6279281eeA600CBfcAd5dd3597A5";
+};
+//# sourceMappingURL=address.d.ts.map
