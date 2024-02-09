@@ -19,14 +19,14 @@ export function WrongNetworkModal({ currentChain, onDismiss }: { currentChain: C
   const chainId = ChainId.BSC
   const { t } = useTranslation()
 
-  currentChain.name = t('BNB Chain')
+  const currentChainName = t('BNB Chain') ?? currentChain.name
 
-  const switchText = t('Switch to %network%', { network: currentChain.name })
+  const switchText = t('Switch to %network%', { network: currentChainName })
 
   return (
     <Modal title={t('You are in wrong network')} headerBackground="gradientCardHeader" onDismiss={onDismiss}>
       <Grid style={{ gap: '16px' }} maxWidth="336px">
-        <Text>{t('This page is located for %network%.', { network: currentChain.name })}</Text>
+        <Text>{t('This page is located for %network%.', { network: currentChainName })}</Text>
         <Text>
           {t('You are under %network% now, please switch the network to continue.', { network: chain?.name ?? '' })}
         </Text>

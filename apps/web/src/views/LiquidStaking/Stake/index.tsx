@@ -1,9 +1,14 @@
-import NextLink from 'next/link'
-import { CardBody, Text, Select, Button } from '@pancakeswap/uikit'
-import { AppHeader } from 'components/App'
 import { useTranslation } from '@pancakeswap/localization'
+import { Button, CardBody, Select, Text } from '@pancakeswap/uikit'
+import { AppHeader } from 'components/App'
+import NextLink from 'next/link'
 import StakeInfo from 'views/LiquidStaking/components/StakeInfo'
-import { OptionProps } from 'pages/liquid-staking/index'
+import { LiquidStakingList } from '../constants/types'
+
+export interface OptionProps extends LiquidStakingList {
+  label: string
+  value: string
+}
 
 interface LiquidStakingPageStakeProps {
   selectedList: OptionProps

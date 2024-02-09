@@ -64,11 +64,12 @@ export const getTokenListTokenUrl = (token: Token) =>
 const commonCurrencySymbols = [
   ethereumTokens.usdt,
   ethereumTokens.usdc,
-  bscTokens.cake,
   ethereumTokens.wbtc,
   ethereumTokens.weth,
   NATIVE[ChainId.BSC],
   bscTokens.busd,
+  bscTokens.czred,
+  bscTokens.czusd,
   ethereumTokens.dai,
 ].map(({ symbol }) => symbol);
 
@@ -80,7 +81,7 @@ export const getCommonCurrencyUrl = memoize(
 export const getCommonCurrencyUrlBySymbol = memoize(
   (symbol?: string): string | undefined =>
     symbol && commonCurrencySymbols.includes(symbol)
-      ? `https://tokens.pancakeswap.finance/images/symbol/${symbol.toLocaleLowerCase()}.png`
+      ? `https://storage.czodiac.com/plasticdigits-team-bucket/token-symbols/${symbol.toLocaleLowerCase()}.png`
       : undefined,
   (symbol?: string) => `logoUrls#symbol#${symbol}`
 );

@@ -1,9 +1,9 @@
 {
   "name": "CZCash",
-  "timestamp": "2024-02-08T02:00:00Z",
+  "timestamp": "2024-02-09T01:00:00Z",
   "version": {
     "major": 8,
-    "minor": 5,
+    "minor": 6,
     "patch": 0
   },
   "tags": {},
@@ -64,7 +64,7 @@
       "address": "0xE95412D2d374B957ca7f8d96ABe6b6c1148fA438",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/LRT.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/LRT.png"
     },
     {
       "name": "Ellipsis X",
@@ -72,7 +72,7 @@
       "address": "0xAf41054C1487b0e5E2B9250C0332eCBCe6CE9d71",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/EPX.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/EPX.png"
     },
     {
       "name": "Duet Governance",
@@ -80,7 +80,7 @@
       "address": "0x95EE03e1e2C5c4877f9A298F1C0D6c98698FAB7B",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/DUET.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/DUET.png"
     },
     {
       "name": "Infinite Two",
@@ -88,7 +88,7 @@
       "address": "0x308811b388B3b34f0F683BCED45Ee6B7B0E0c6f1",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/IF2.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/IF2.png"
     },
     {
       "name": "DotDot Finance",
@@ -96,7 +96,7 @@
       "address": "0x84c97300a190676a19D1E13115629A11f8482Bd1",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/DDD.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/DDD.png"
     },
     {
       "name": "Ankr Protocol",
@@ -104,7 +104,7 @@
       "address": "0xf307910A4c7bbc79691fD374889b36d8531B08e3",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/ANKR.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/ANKR.png"
     },
     {
       "name": "Lucky Silver Dollar Token",
@@ -112,7 +112,7 @@
       "address": "0xAa83Bb1Be2a74AaA8795a8887054919A0Ea96BFA",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/LSDT.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/LSDT.png"
     },
     {
       "name": "GreenMiner",
@@ -120,7 +120,7 @@
       "address": "0x701F1ed50Aa5e784B8Fb89d1Ba05cCCd627839a7",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/GEM.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/GEM.png"
     },
     {
       "name": "DogeGod",
@@ -128,7 +128,7 @@
       "address": "0x99F4cc2BAE97F82A823CA80DcAe52EF972B7F270",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/DGOD.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/DGOD.png"
     },
     {
       "name": "Dogecoin",
@@ -136,7 +136,7 @@
       "address": "0xbA2aE424d960c26247Dd6c32edC70B295c744C43",
       "chainId": 56,
       "decimals": 8,
-      "logoURI": "https://cz.cash/images/tokens/DOGE.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/DOGE.png"
     },
     {
       "name": "FlokiMultiverse",
@@ -144,7 +144,7 @@
       "address": "0x7a2E776650F02113DEfCD2EFF1ea0B3ba02bd45a",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/FLOX.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/FLOX.png"
     },
     {
       "name": "CZRED",
@@ -152,7 +152,7 @@
       "address": "0x5cd0c2C744caF04cda258Efc6558A3Ed3defE97b",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/CZR.svg"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/CZR.svg"
     },
     {
       "name": "Divi Pool",
@@ -160,7 +160,7 @@
       "address": "0x5b5F7e24D075394E92fd3C131B0B8A086e01f819",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/DIVIPOOL.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/DIVIPOOL.png"
     },
     {
       "name": "Raging Bull Network",
@@ -168,7 +168,7 @@
       "address": "0x48c2bc3d0c63174B811aD4fa09b45cC039578aDb",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/BRAG.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/BRAG.png"
     },
     {
       "name": "CZBlue",
@@ -176,7 +176,7 @@
       "address": "0xD963b2236D227a0302E19F2f9595F424950dc186",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/CZB.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/CZB.png"
     },
     {
       "name": "Squish",
@@ -184,7 +184,7 @@
       "address": "0xcfa661975D9b3f6bc7fcb60642c366A12E856348",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/SQ.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/SQ.png"
     },
     {
       "name": "🎭🔫💰🏴‍☠️👤",
@@ -192,7 +192,7 @@
       "address": "0x2a10CFe2300e5DF9417F7bEe99ef1e81228F0Ac7",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/BANDIT.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/BANDIT.png"
     },
     {
       "name": "Blessed Silver Rupees",
@@ -200,7 +200,7 @@
       "address": "0xa86E876C9FD7A3dba82bcCAbb6826F4812F581b5",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/BSR.svg"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/BSR.svg"
     },
     {
       "name": "DogeDemon",
@@ -208,7 +208,7 @@
       "address": "0x2928832F8227680F8a84D166dA8fB4B59454D960",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/DOGED.svg"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/DOGED.svg"
     },
     {
       "name": "Golden 0x",
@@ -216,7 +216,7 @@
       "address": "0xC968ce1792537290dceF639F8bc1dd1E48Cebc78",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/G0x.jpg"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/G0x.jpg"
     },
     {
       "name": "GGems",
@@ -224,7 +224,7 @@
       "address": "0xD0D0B3a423f6c76648EfcF6b4892AD60d2f2eF48",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/$Gems.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/$Gems.png"
     },
     {
       "name": "Tempestas Copper",
@@ -232,7 +232,7 @@
       "address": "0x8fEEdfcdd4264EA97d1656F20E162D8336926482",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/TCU29.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/TCU29.png"
     },
     {
       "name": "TenX",
@@ -296,7 +296,7 @@
       "address": "0xA59d649B5e3Bbb1390141C3c25c255FAA909A81F",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/DAMP.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/DAMP.png"
     },
     {
       "name": "UkrainianTribe.com",
@@ -304,7 +304,7 @@
       "address": "0x390D9613bA4E1352cBCc289a6629139bdE0cD321",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/KYIV.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/KYIV.png"
     },
     {
       "name": "CZodiac USD",
@@ -312,7 +312,7 @@
       "address": "0xE68b79e51bf826534Ff37AA9CeE71a3842ee9c70",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/czusd.svg"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/czusd.svg"
     },
     {
       "name": "CZodiac Farm",
@@ -320,7 +320,7 @@
       "address": "0x7c1608C004F20c3520f70b924E2BfeF092dA0043",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/CZF.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/CZF.png"
     },
     {
       "name": "GiftedHands",
@@ -328,7 +328,7 @@
       "address": "0xfDFD27aE39cebefDBaAc8615F18aa68DDD0F15f5",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/GHD.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/GHD.png"
     },
     {
       "name": "InfiniteOne",
@@ -336,7 +336,7 @@
       "address": "0xfCaC1a3eDE7b55Cc51e3eBff2885a67FBfE01a1A",
       "chainId": 56,
       "decimals": 9,
-      "logoURI": "https://cz.cash/images/tokens/IF1.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/IF1.png"
     },
     {
       "name": "Berry",
@@ -344,7 +344,7 @@
       "address": "0xf859Bf77cBe8699013d6Dbc7C2b926Aaf307F830",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/BRY.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/BRY.png"
     },
     {
       "name": "GuitarSwap",
@@ -352,7 +352,7 @@
       "address": "0xb6bA8c98021C31A02DD65e9bE97729EbA859d4E2",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/GUT.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/GUT.png"
     },
     {
       "name": "AmpleSwap",
@@ -360,7 +360,7 @@
       "address": "0x335F6e0E804B70A96bf9eB8AF31588942e9B2515",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/AMPLE.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/AMPLE.png"
     },
     {
       "name": "Mainstreet",
@@ -368,7 +368,7 @@
       "address": "0x8FC1A944c149762B6b578A06c0de2ABd6b7d2B89",
       "chainId": 56,
       "decimals": 9,
-      "logoURI": "https://cz.cash/images/tokens/MAINST.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/MAINST.png"
     },
     {
       "name": "DeapCoin",
@@ -376,7 +376,7 @@
       "address": "0xcaF5191fc480F43e4DF80106c7695ECA56E48B18",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/DEP.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/DEP.png"
     },
     {
       "name": "Olive",
@@ -384,7 +384,7 @@
       "address": "0x617724974218A18769020A70162165A539c07E8a",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/OLIVE.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/OLIVE.png"
     },
     {
       "name": "ChainWars",
@@ -392,7 +392,7 @@
       "address": "0x9c6b7221cDDA3b8136fbF9D27ac07AeeCC1087B5",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/CWE.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/CWE.png"
     },
     {
       "name": "WalletNow",
@@ -400,7 +400,7 @@
       "address": "0x56AA0237244C67B9A854B4Efe8479cCa0B105289",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://cz.cash/images/tokens/WNOW.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/WNOW.png"
     },
     {
       "name": "DonkSwap",
@@ -408,7 +408,7 @@
       "address": "0x3969Fe107bAe2537cb58047159a83C33dfbD73f9",
       "chainId": 56,
       "decimals": 9,
-      "logoURI": "https://cz.cash/images/tokens/DST.png"
+      "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/DST.png"
     },
     {
       "name": "ChainLink Token",

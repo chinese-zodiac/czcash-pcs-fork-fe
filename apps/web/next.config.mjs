@@ -187,7 +187,7 @@ const config = {
       },
       {
         source: '/images/tokens/:address',
-        destination: 'https://tokens.pancakeswap.finance/images/:address',
+        destination: 'https://storage.czodiac.com/plasticdigits-team-bucket/tokens/:address',
         permanent: false,
       },
       {

@@ -28,11 +28,6 @@ import { chains } from 'utils/wagmi'
 import { useNetwork } from 'wagmi'
 import { ChainLogo } from './Logo/ChainLogo'
 
-const AptosChain = {
-  id: 1,
-  name: 'Aptos',
-}
-
 const NetworkSelect = ({ switchNetwork, chainId }) => {
   const { t } = useTranslation()
   const [showTestnet] = useUserShowTestnet()
