@@ -1,9 +1,9 @@
 {
   "name": "CZCash",
-  "timestamp": "2024-02-09T01:00:00Z",
+  "timestamp": "2024-02-21T01:00:00Z",
   "version": {
     "major": 8,
-    "minor": 6,
+    "minor": 7,
     "patch": 0
   },
   "tags": {},
@@ -229,7 +229,7 @@
     {
       "name": "Tempestas Copper",
       "symbol": "TCu29",
-      "address": "0x8fEEdfcdd4264EA97d1656F20E162D8336926482",
+      "address": "0x5b0B5c848a843c83c20dcfa25CDe6E122898a614",
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://storage.czodiac.com/plasticdigits-team-bucket/tokens/TCU29.png"
