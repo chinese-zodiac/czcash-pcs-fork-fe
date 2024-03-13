@@ -1,11 +1,11 @@
 import { ChainId } from '@pancakeswap/chains'
+import { GAUGES_CONFIG, GaugeConfig, GaugeType } from '@pancakeswap/gauges'
 import { Currency, Token } from '@pancakeswap/sdk'
 import { getTokensByChain } from '@pancakeswap/tokens'
-import type { Address } from 'viem'
-import { GAUGES_CONFIG, GaugeConfig, GaugeType } from '@pancakeswap/gauges'
 import flatMap from 'lodash/flatMap.js'
 import memoize from 'lodash/memoize.js'
 import uniqBy from 'lodash/uniqBy.js'
+import type { Address } from 'viem'
 
 import { ADDITIONAL_BASES, BASES_TO_CHECK_TRADES_AGAINST, CUSTOM_BASES } from '../../constants'
 import { wrappedCurrency } from '../../utils/currency'

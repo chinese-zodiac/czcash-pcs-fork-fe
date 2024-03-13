@@ -1,4 +1,4 @@
-import { __export, wrappedCurrency, BASES_TO_CHECK_TRADES_AGAINST, ADDITIONAL_BASES, CUSTOM_BASES, STABLE_SUPPORTED_CHAIN_IDS, BETTER_TRADE_LESS_HOPS_THRESHOLD, pancakePairABI, getStableSwapPools, wrappedCurrencyAmount, stableSwapPairABI, STABLE_SWAP_INFO_ADDRESS } from './chunk-BN322AYN.mjs';
+import { __export, wrappedCurrency, BASES_TO_CHECK_TRADES_AGAINST, ADDITIONAL_BASES, CUSTOM_BASES, STABLE_SUPPORTED_CHAIN_IDS, BETTER_TRADE_LESS_HOPS_THRESHOLD, pancakePairABI, getStableSwapPools, wrappedCurrencyAmount, stableSwapPairABI, STABLE_SWAP_INFO_ADDRESS } from './chunk-ZZCGH4AM.mjs';
 import flatMap from 'lodash/flatMap.js';
 import { ERC20Token, Price, Percent, TradeType, isTradeBetter, Pair, CurrencyAmount, Trade, ZERO, Fraction, ONE, computePriceImpact } from '@pancakeswap/sdk';
 import { deserializeToken } from '@pancakeswap/token-lists';

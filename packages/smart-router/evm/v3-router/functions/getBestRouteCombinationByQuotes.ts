@@ -45,6 +45,12 @@ export function getBestRouteCombinationByQuotes(
   // );
 
   // Given all the valid quotes for each percentage find the optimal route.
+  console.log('tradeType', tradeType)
+  console.log('percentToQuotes', percentToQuotes)
+  console.log(
+    'percents',
+    percents.sort((a, b) => a - b),
+  )
   const swapRoute = getBestSwapRouteBy(
     tradeType,
     percentToQuotes,
@@ -53,6 +59,7 @@ export function getBestRouteCombinationByQuotes(
     (rq: RouteWithQuote) => rq.quoteAdjustedForGas,
     config,
   )
+  console.log('swapRoute', swapRoute)
 
   // It is possible we were unable to find any valid route given the quotes.
   if (!swapRoute) {

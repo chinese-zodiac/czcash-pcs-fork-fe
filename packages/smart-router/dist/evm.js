@@ -1,11 +1,11 @@
 'use strict';
 
-var chunkLFBUJBCP_js = require('./chunk-LFBUJBCP.js');
+var chunkQ2HOBH3Y_js = require('./chunk-Q2HOBH3Y.js');
 var sdk = require('@pancakeswap/sdk');
 var invariant5 = require('tiny-invariant');
 var chains = require('@pancakeswap/chains');
-var tokens = require('@pancakeswap/tokens');
 var gauges = require('@pancakeswap/gauges');
+var tokens = require('@pancakeswap/tokens');
 var flatMap = require('lodash/flatMap.js');
 var memoize2 = require('lodash/memoize.js');
 var uniqBy = require('lodash/uniqBy.js');
@@ -42,7 +42,7 @@ var stats__default = /*#__PURE__*/_interopDefault(stats);
 
 // evm/stableSwap/index.ts
 var stableSwap_exports = {};
-chunkLFBUJBCP_js.__export(stableSwap_exports, {
+chunkQ2HOBH3Y_js.__export(stableSwap_exports, {
   getD: () => getD,
   getLPOutput: () => getLPOutput,
   getLPOutputWithoutFee: () => getLPOutputWithoutFee,
@@ -238,7 +238,7 @@ function getSwapInputWithtouFee(params) {
 
 // evm/v3-router/smartRouter.ts
 var smartRouter_exports = {};
-chunkLFBUJBCP_js.__export(smartRouter_exports, {
+chunkQ2HOBH3Y_js.__export(smartRouter_exports, {
   APISchema: () => schema_exports,
   PancakeMulticallProvider: () => PancakeMulticallProvider,
   Transformer: () => transformer_exports,
@@ -478,7 +478,7 @@ function encodeMixedRouteToPath(route, exactOutput) {
   const { path, types } = route.pools.reduce(
     ({ inputToken, path: path2, types: types2 }, pool, index) => {
       const outputToken = getOutputCurrency(pool, inputToken).wrapped;
-      const fee = isV3Pool(pool) ? pool.fee : chunkLFBUJBCP_js.V2_FEE_PATH_PLACEHOLDER;
+      const fee = isV3Pool(pool) ? pool.fee : chunkQ2HOBH3Y_js.V2_FEE_PATH_PLACEHOLDER;
       if (index === 0) {
         return {
           inputToken: outputToken,
@@ -512,7 +512,7 @@ function getNativeWrappedToken(chainId) {
 
 // evm/v3-router/utils/getUsdGasToken.ts
 function getUsdGasToken(chainId) {
-  return chunkLFBUJBCP_js.usdGasTokensByChain[chainId]?.[0] ?? null;
+  return chunkQ2HOBH3Y_js.usdGasTokensByChain[chainId]?.[0] ?? null;
 }
 
 // evm/v3-router/utils/isCurrenciesSameChain.ts
@@ -626,7 +626,7 @@ function getMidPrice({ path, pools }) {
 
 // evm/v3-router/utils/transformer.ts
 var transformer_exports = {};
-chunkLFBUJBCP_js.__export(transformer_exports, {
+chunkQ2HOBH3Y_js.__export(transformer_exports, {
   parseCurrency: () => parseCurrency,
   parseCurrencyAmount: () => parseCurrencyAmount,
   parsePool: () => parsePool,
@@ -781,7 +781,7 @@ var getGaugesByChain = memoize2__default.default(
   (chainId) => chainId
 );
 function isTokenInCommonBases(token) {
-  return Boolean(token && chunkLFBUJBCP_js.BASES_TO_CHECK_TRADES_AGAINST[token.chainId].find((t) => t.equals(token)));
+  return Boolean(token && chunkQ2HOBH3Y_js.BASES_TO_CHECK_TRADES_AGAINST[token.chainId].find((t) => t.equals(token)));
 }
 var getTokenBasesFromGauges = memoize2__default.default(
   (currency) => {
@@ -836,7 +836,7 @@ var resolver = (currencyA, currencyB) => {
 function getAdditionalCheckAgainstBaseTokens(currencyA, currencyB) {
   const chainId = currencyA?.chainId;
   const additionalBases = {
-    ...chainId ? chunkLFBUJBCP_js.ADDITIONAL_BASES[chainId] ?? {} : {}
+    ...chainId ? chunkQ2HOBH3Y_js.ADDITIONAL_BASES[chainId] ?? {} : {}
   };
   const uniq = (tokens) => uniqBy__default.default(tokens, (t) => t.address);
   const additionalA = currencyA && chainId ? uniq([...additionalBases[currencyA.wrapped.address] || [], ...getTokenBasesFromGauges(currencyA)]) ?? [] : [];
@@ -848,11 +848,11 @@ var getCheckAgainstBaseTokens = memoize2__default.default((currencyA, currencyB)
   if (!chainId || !currencyA || !currencyB || !isCurrenciesSameChain(currencyA, currencyB)) {
     return [];
   }
-  const [tokenA, tokenB] = chainId ? [chunkLFBUJBCP_js.wrappedCurrency(currencyA, chainId), chunkLFBUJBCP_js.wrappedCurrency(currencyB, chainId)] : [void 0, void 0];
+  const [tokenA, tokenB] = chainId ? [chunkQ2HOBH3Y_js.wrappedCurrency(currencyA, chainId), chunkQ2HOBH3Y_js.wrappedCurrency(currencyB, chainId)] : [void 0, void 0];
   if (!tokenA || !tokenB) {
     return [];
   }
-  const common = chunkLFBUJBCP_js.BASES_TO_CHECK_TRADES_AGAINST[chainId] ?? [];
+  const common = chunkQ2HOBH3Y_js.BASES_TO_CHECK_TRADES_AGAINST[chainId] ?? [];
   return [...common, ...getAdditionalCheckAgainstBaseTokens(currencyA, currencyB)];
 }, resolver);
 var getPairCombinations = memoize2__default.default((currencyA, currencyB) => {
@@ -860,7 +860,7 @@ var getPairCombinations = memoize2__default.default((currencyA, currencyB) => {
   if (!chainId || !currencyA || !currencyB || !isCurrenciesSameChain(currencyA, currencyB)) {
     return [];
   }
-  const [tokenA, tokenB] = chainId ? [chunkLFBUJBCP_js.wrappedCurrency(currencyA, chainId), chunkLFBUJBCP_js.wrappedCurrency(currencyB, chainId)] : [void 0, void 0];
+  const [tokenA, tokenB] = chainId ? [chunkQ2HOBH3Y_js.wrappedCurrency(currencyA, chainId), chunkQ2HOBH3Y_js.wrappedCurrency(currencyB, chainId)] : [void 0, void 0];
   if (!tokenA || !tokenB) {
     return [];
   }
@@ -881,7 +881,7 @@ var getPairCombinations = memoize2__default.default((currencyA, currencyB) => {
   ].filter((tokens) => Boolean(tokens[0] && tokens[1])).filter(([t0, t1]) => !t0.equals(t1)).filter(([tokenA_, tokenB_]) => {
     if (!chainId)
       return true;
-    const customBases = chunkLFBUJBCP_js.CUSTOM_BASES[chainId];
+    const customBases = chunkQ2HOBH3Y_js.CUSTOM_BASES[chainId];
     const customBasesA = customBases?.[tokenA_.wrapped.address];
     const customBasesB = customBases?.[tokenB_.wrapped.address];
     if (!customBasesA && !customBasesB)
@@ -942,6 +942,12 @@ function getBestRouteCombinationByQuotes(amount, quoteCurrency, routesWithQuote,
     }
     percentToQuotes[routeWithQuote.percent].push(routeWithQuote);
   }
+  console.log("tradeType", tradeType);
+  console.log("percentToQuotes", percentToQuotes);
+  console.log(
+    "percents",
+    percents.sort((a, b) => a - b)
+  );
   const swapRoute = getBestSwapRouteBy(
     tradeType,
     percentToQuotes,
@@ -950,6 +956,7 @@ function getBestRouteCombinationByQuotes(amount, quoteCurrency, routesWithQuote,
     (rq) => rq.quoteAdjustedForGas,
     config
   );
+  console.log("swapRoute", swapRoute);
   if (!swapRoute) {
     return null;
   }
@@ -1149,10 +1156,10 @@ function getBestSwapRouteBy(tradeType, percentToQuotes, percents, chainId, by, {
   }
   let quoteGasAdjusted = sumFn(bestSwap.map((routeWithValidQuote) => routeWithValidQuote.quoteAdjustedForGas));
   const estimatedGasUsed = bestSwap.map((routeWithValidQuote) => routeWithValidQuote.gasEstimate).reduce((sum2, routeWithValidQuote) => sum2 + routeWithValidQuote, 0n);
-  if (!chunkLFBUJBCP_js.usdGasTokensByChain[chainId] || !chunkLFBUJBCP_js.usdGasTokensByChain[chainId][0]) {
+  if (!chunkQ2HOBH3Y_js.usdGasTokensByChain[chainId] || !chunkQ2HOBH3Y_js.usdGasTokensByChain[chainId][0]) {
     throw new Error(`Could not find a USD token for computing gas costs on ${chainId}`);
   }
-  const usdToken = chunkLFBUJBCP_js.usdGasTokensByChain[chainId][0];
+  const usdToken = chunkQ2HOBH3Y_js.usdGasTokensByChain[chainId][0];
   const usdTokenDecimals = usdToken.decimals;
   const gasCostsL1ToL2 = {
     gasUsedL1: 0n,
@@ -1264,33 +1271,33 @@ async function createGasModel({
       const { type } = pool;
       if (isV2Pool(pool)) {
         if (!poolTypeSet.has(type)) {
-          baseGasUse += chunkLFBUJBCP_js.BASE_SWAP_COST_V2;
+          baseGasUse += chunkQ2HOBH3Y_js.BASE_SWAP_COST_V2;
           poolTypeSet.add(type);
           continue;
         }
-        baseGasUse += chunkLFBUJBCP_js.COST_PER_EXTRA_HOP_V2;
+        baseGasUse += chunkQ2HOBH3Y_js.COST_PER_EXTRA_HOP_V2;
         continue;
       }
       if (isV3Pool(pool)) {
         if (!poolTypeSet.has(type)) {
-          baseGasUse += chunkLFBUJBCP_js.BASE_SWAP_COST_V3(chainId);
+          baseGasUse += chunkQ2HOBH3Y_js.BASE_SWAP_COST_V3(chainId);
           poolTypeSet.add(type);
         }
-        baseGasUse += chunkLFBUJBCP_js.COST_PER_HOP_V3(chainId);
+        baseGasUse += chunkQ2HOBH3Y_js.COST_PER_HOP_V3(chainId);
         continue;
       }
       if (isStablePool(pool)) {
         if (!poolTypeSet.has(type)) {
-          baseGasUse += chunkLFBUJBCP_js.BASE_SWAP_COST_STABLE_SWAP;
+          baseGasUse += chunkQ2HOBH3Y_js.BASE_SWAP_COST_STABLE_SWAP;
           poolTypeSet.add(type);
           continue;
         }
-        baseGasUse += chunkLFBUJBCP_js.COST_PER_EXTRA_HOP_STABLE_SWAP;
+        baseGasUse += chunkQ2HOBH3Y_js.COST_PER_EXTRA_HOP_STABLE_SWAP;
         continue;
       }
     }
-    const tickGasUse = chunkLFBUJBCP_js.COST_PER_INIT_TICK(chainId) * totalInitializedTicksCrossed;
-    const uninitializedTickGasUse = chunkLFBUJBCP_js.COST_PER_UNINIT_TICK * 0n;
+    const tickGasUse = chunkQ2HOBH3Y_js.COST_PER_INIT_TICK(chainId) * totalInitializedTicksCrossed;
+    const uninitializedTickGasUse = chunkQ2HOBH3Y_js.COST_PER_UNINIT_TICK * 0n;
     baseGasUse = baseGasUse + tickGasUse + uninitializedTickGasUse;
     const baseGasCostWei = gasPrice * baseGasUse;
     const totalGasCostNativeCurrency = sdk.CurrencyAmount.fromRawAmount(nativeWrappedToken, baseGasCostWei);
@@ -1760,7 +1767,7 @@ var getCommonTokenPrices = withFallback([
   }
 ]);
 var getV2PoolsOnChain = createOnChainPoolFactory({
-  abi: chunkLFBUJBCP_js.pancakePairABI,
+  abi: chunkQ2HOBH3Y_js.pancakePairABI,
   getPossiblePoolMetas: ([currencyA, currencyB]) => [
     { address: computeV2PoolAddress(currencyA.wrapped, currencyB.wrapped), currencyA, currencyB }
   ],
@@ -1785,9 +1792,9 @@ var getV2PoolsOnChain = createOnChainPoolFactory({
   }
 });
 var getStablePoolsOnChain = createOnChainPoolFactory({
-  abi: chunkLFBUJBCP_js.stableSwapPairABI,
+  abi: chunkQ2HOBH3Y_js.stableSwapPairABI,
   getPossiblePoolMetas: ([currencyA, currencyB]) => {
-    const poolConfigs = chunkLFBUJBCP_js.getStableSwapPools(currencyA.chainId);
+    const poolConfigs = chunkQ2HOBH3Y_js.getStableSwapPools(currencyA.chainId);
     return poolConfigs.filter(({ token, quoteToken }) => {
       const tokenA = tokenLists.deserializeToken(token);
       const tokenB = tokenLists.deserializeToken(quoteToken);
@@ -2005,7 +2012,7 @@ function poolSelectorFactory({
     }
     const poolsFromSubgraph = unorderedPoolsWithTvl.sort(sortByTvl);
     const { chainId } = getToken0(poolsFromSubgraph[0]);
-    const baseTokens = chunkLFBUJBCP_js.BASES_TO_CHECK_TRADES_AGAINST[chainId] ?? [];
+    const baseTokens = chunkQ2HOBH3Y_js.BASES_TO_CHECK_TRADES_AGAINST[chainId] ?? [];
     const poolSet = /* @__PURE__ */ new Set();
     const addToPoolSet = (pools2) => {
       for (const pool of pools2) {
@@ -3603,7 +3610,7 @@ function onChainQuoteProviderFactory({ getQuoteFunctionName, getQuoterAddress, a
         } = routes[0];
         const quoterAddress = getQuoterAddress(chainId);
         const minSuccessRate = SUCCESS_RATE_CONFIG[chainId];
-        const multicallConfigs = multicallConfigsOverride?.[chainId] || chunkLFBUJBCP_js.BATCH_MULTICALL_CONFIGS[chainId] || chunkLFBUJBCP_js.BATCH_MULTICALL_CONFIGS[chains.ChainId.ETHEREUM];
+        const multicallConfigs = multicallConfigsOverride?.[chainId] || chunkQ2HOBH3Y_js.BATCH_MULTICALL_CONFIGS[chainId] || chunkQ2HOBH3Y_js.BATCH_MULTICALL_CONFIGS[chains.ChainId.ETHEREUM];
         const {
           defaultConfig: { gasLimitPerCall: defaultGasLimitPerCall, dropUnexecutedCalls }
         } = multicallConfigs;
@@ -3744,7 +3751,7 @@ function processQuoteResults(quoteResults, routes, gasModel, adjustQuoteForGas) 
   return routesWithQuote;
 }
 var createMixedRouteOnChainQuoteProvider = onChainQuoteProviderFactory({
-  getQuoterAddress: (chainId) => chunkLFBUJBCP_js.MIXED_ROUTE_QUOTER_ADDRESSES[chainId],
+  getQuoterAddress: (chainId) => chunkQ2HOBH3Y_js.MIXED_ROUTE_QUOTER_ADDRESSES[chainId],
   getQuoteFunctionName: () => "quoteExactInput",
   abi: mixedRouteQuoterV1ABI,
   getCallInputs: (route, isExactIn) => [
@@ -3770,7 +3777,7 @@ var createMixedRouteOnChainQuoteProvider = onChainQuoteProviderFactory({
   ]
 });
 var createV3OnChainQuoteProvider = onChainQuoteProviderFactory({
-  getQuoterAddress: (chainId) => chunkLFBUJBCP_js.V3_QUOTER_ADDRESSES[chainId],
+  getQuoterAddress: (chainId) => chunkQ2HOBH3Y_js.V3_QUOTER_ADDRESSES[chainId],
   getQuoteFunctionName: (isExactIn) => isExactIn ? "quoteExactInput" : "quoteExactOutput",
   abi: quoterV2ABI,
   getCallInputs: (route, isExactIn) => [
@@ -3839,7 +3846,7 @@ function createQuoteProvider(config) {
 
 // evm/v3-router/schema.ts
 var schema_exports = {};
-chunkLFBUJBCP_js.__export(schema_exports, {
+chunkQ2HOBH3Y_js.__export(schema_exports, {
   zPools: () => zPools,
   zRouterGetParams: () => zRouterGetParams,
   zRouterPostParams: () => zRouterPostParams
@@ -5260,7 +5267,7 @@ var _SwapRouter = class {
     const amountOut = minimumAmountOut(trade, options.slippageTolerance).quotient;
     const route = trade.routes[0];
     const path = route.path.map((token) => token.wrapped.address);
-    const recipient = routerMustCustody ? chunkLFBUJBCP_js.ADDRESS_THIS : typeof options.recipient === "undefined" ? chunkLFBUJBCP_js.MSG_SENDER : sdk.validateAndParseAddress(options.recipient);
+    const recipient = routerMustCustody ? chunkQ2HOBH3Y_js.ADDRESS_THIS : typeof options.recipient === "undefined" ? chunkQ2HOBH3Y_js.MSG_SENDER : sdk.validateAndParseAddress(options.recipient);
     if (trade.tradeType === sdk.TradeType.EXACT_INPUT) {
       const exactInputParams = [amountIn, performAggregatedSlippageCheck ? 0n : amountOut, path, recipient];
       return viem.encodeFunctionData({
@@ -5293,7 +5300,7 @@ var _SwapRouter = class {
     const route = trade.routes[0];
     const path = route.path.map((token) => token.wrapped.address);
     const flags = route.pools.map((p) => BigInt(p.balances.length));
-    const recipient = routerMustCustody ? chunkLFBUJBCP_js.ADDRESS_THIS : typeof options.recipient === "undefined" ? chunkLFBUJBCP_js.MSG_SENDER : sdk.validateAndParseAddress(options.recipient);
+    const recipient = routerMustCustody ? chunkQ2HOBH3Y_js.ADDRESS_THIS : typeof options.recipient === "undefined" ? chunkQ2HOBH3Y_js.MSG_SENDER : sdk.validateAndParseAddress(options.recipient);
     if (trade.tradeType === sdk.TradeType.EXACT_INPUT) {
       const exactInputParams = [
         path,
@@ -5330,7 +5337,7 @@ var _SwapRouter = class {
       const amountIn = maximumAmountIn(trade, options.slippageTolerance, inputAmount).quotient;
       const amountOut = minimumAmountOut(trade, options.slippageTolerance, outputAmount).quotient;
       const singleHop = pools.length === 1;
-      const recipient = routerMustCustody ? chunkLFBUJBCP_js.ADDRESS_THIS : typeof options.recipient === "undefined" ? chunkLFBUJBCP_js.MSG_SENDER : sdk.validateAndParseAddress(options.recipient);
+      const recipient = routerMustCustody ? chunkQ2HOBH3Y_js.ADDRESS_THIS : typeof options.recipient === "undefined" ? chunkQ2HOBH3Y_js.MSG_SENDER : sdk.validateAndParseAddress(options.recipient);
       if (singleHop) {
         if (trade.tradeType === sdk.TradeType.EXACT_INPUT) {
           const exactInputSingleParams = {
@@ -5422,7 +5429,7 @@ var _SwapRouter = class {
       const amountIn = maximumAmountIn(trade, options.slippageTolerance, inputAmount).quotient;
       const amountOut = minimumAmountOut(trade, options.slippageTolerance, outputAmount).quotient;
       const singleHop = pools.length === 1;
-      const recipient = routerMustCustody ? chunkLFBUJBCP_js.ADDRESS_THIS : typeof options.recipient === "undefined" ? chunkLFBUJBCP_js.MSG_SENDER : sdk.validateAndParseAddress(options.recipient);
+      const recipient = routerMustCustody ? chunkQ2HOBH3Y_js.ADDRESS_THIS : typeof options.recipient === "undefined" ? chunkQ2HOBH3Y_js.MSG_SENDER : sdk.validateAndParseAddress(options.recipient);
       const mixedRouteIsAllV3 = (r) => {
         return r.pools.every(isV3Pool);
       };
@@ -5494,7 +5501,7 @@ var _SwapRouter = class {
           const newRoute = buildBaseRoute([...section], inputToken, outputToken);
           inputToken = outputToken.wrapped;
           const lastSectionInRoute = isLastSectionInRoute(i);
-          const recipientAddress = lastSectionInRoute ? recipient : chunkLFBUJBCP_js.ADDRESS_THIS;
+          const recipientAddress = lastSectionInRoute ? recipient : chunkQ2HOBH3Y_js.ADDRESS_THIS;
           const inAmount = i === 0 ? amountIn : 0n;
           const outAmount = !lastSectionInRoute ? 0n : amountOut;
           if (mixedRouteIsAllV3(newRoute)) {
@@ -5813,111 +5820,111 @@ SwapRouter.ABI = swapRouter02Abi;
 
 Object.defineProperty(exports, 'ADDITIONAL_BASES', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.ADDITIONAL_BASES; }
+  get: function () { return chunkQ2HOBH3Y_js.ADDITIONAL_BASES; }
 });
 Object.defineProperty(exports, 'ADDRESS_THIS', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.ADDRESS_THIS; }
+  get: function () { return chunkQ2HOBH3Y_js.ADDRESS_THIS; }
 });
 Object.defineProperty(exports, 'BASES_TO_CHECK_TRADES_AGAINST', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.BASES_TO_CHECK_TRADES_AGAINST; }
+  get: function () { return chunkQ2HOBH3Y_js.BASES_TO_CHECK_TRADES_AGAINST; }
 });
 Object.defineProperty(exports, 'BASE_SWAP_COST_STABLE_SWAP', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.BASE_SWAP_COST_STABLE_SWAP; }
+  get: function () { return chunkQ2HOBH3Y_js.BASE_SWAP_COST_STABLE_SWAP; }
 });
 Object.defineProperty(exports, 'BASE_SWAP_COST_V2', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.BASE_SWAP_COST_V2; }
+  get: function () { return chunkQ2HOBH3Y_js.BASE_SWAP_COST_V2; }
 });
 Object.defineProperty(exports, 'BASE_SWAP_COST_V3', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.BASE_SWAP_COST_V3; }
+  get: function () { return chunkQ2HOBH3Y_js.BASE_SWAP_COST_V3; }
 });
 Object.defineProperty(exports, 'BATCH_MULTICALL_CONFIGS', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.BATCH_MULTICALL_CONFIGS; }
+  get: function () { return chunkQ2HOBH3Y_js.BATCH_MULTICALL_CONFIGS; }
 });
 Object.defineProperty(exports, 'BETTER_TRADE_LESS_HOPS_THRESHOLD', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.BETTER_TRADE_LESS_HOPS_THRESHOLD; }
+  get: function () { return chunkQ2HOBH3Y_js.BETTER_TRADE_LESS_HOPS_THRESHOLD; }
 });
 Object.defineProperty(exports, 'BIG_INT_TEN', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.BIG_INT_TEN; }
+  get: function () { return chunkQ2HOBH3Y_js.BIG_INT_TEN; }
 });
 Object.defineProperty(exports, 'BIPS_BASE', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.BIPS_BASE; }
+  get: function () { return chunkQ2HOBH3Y_js.BIPS_BASE; }
 });
 Object.defineProperty(exports, 'COST_PER_EXTRA_HOP_STABLE_SWAP', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.COST_PER_EXTRA_HOP_STABLE_SWAP; }
+  get: function () { return chunkQ2HOBH3Y_js.COST_PER_EXTRA_HOP_STABLE_SWAP; }
 });
 Object.defineProperty(exports, 'COST_PER_EXTRA_HOP_V2', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.COST_PER_EXTRA_HOP_V2; }
+  get: function () { return chunkQ2HOBH3Y_js.COST_PER_EXTRA_HOP_V2; }
 });
 Object.defineProperty(exports, 'COST_PER_HOP_V3', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.COST_PER_HOP_V3; }
+  get: function () { return chunkQ2HOBH3Y_js.COST_PER_HOP_V3; }
 });
 Object.defineProperty(exports, 'COST_PER_INIT_TICK', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.COST_PER_INIT_TICK; }
+  get: function () { return chunkQ2HOBH3Y_js.COST_PER_INIT_TICK; }
 });
 Object.defineProperty(exports, 'COST_PER_UNINIT_TICK', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.COST_PER_UNINIT_TICK; }
+  get: function () { return chunkQ2HOBH3Y_js.COST_PER_UNINIT_TICK; }
 });
 Object.defineProperty(exports, 'CUSTOM_BASES', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.CUSTOM_BASES; }
+  get: function () { return chunkQ2HOBH3Y_js.CUSTOM_BASES; }
 });
 Object.defineProperty(exports, 'MIN_BNB', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.MIN_BNB; }
+  get: function () { return chunkQ2HOBH3Y_js.MIN_BNB; }
 });
 Object.defineProperty(exports, 'MIXED_ROUTE_QUOTER_ADDRESSES', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.MIXED_ROUTE_QUOTER_ADDRESSES; }
+  get: function () { return chunkQ2HOBH3Y_js.MIXED_ROUTE_QUOTER_ADDRESSES; }
 });
 Object.defineProperty(exports, 'MSG_SENDER', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.MSG_SENDER; }
+  get: function () { return chunkQ2HOBH3Y_js.MSG_SENDER; }
 });
 Object.defineProperty(exports, 'SMART_ROUTER_ADDRESSES', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.SMART_ROUTER_ADDRESSES; }
+  get: function () { return chunkQ2HOBH3Y_js.SMART_ROUTER_ADDRESSES; }
 });
 Object.defineProperty(exports, 'STABLE_SWAP_INFO_ADDRESS', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.STABLE_SWAP_INFO_ADDRESS; }
+  get: function () { return chunkQ2HOBH3Y_js.STABLE_SWAP_INFO_ADDRESS; }
 });
 Object.defineProperty(exports, 'V2_FEE_PATH_PLACEHOLDER', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.V2_FEE_PATH_PLACEHOLDER; }
+  get: function () { return chunkQ2HOBH3Y_js.V2_FEE_PATH_PLACEHOLDER; }
 });
 Object.defineProperty(exports, 'V2_ROUTER_ADDRESS', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.V2_ROUTER_ADDRESS; }
+  get: function () { return chunkQ2HOBH3Y_js.V2_ROUTER_ADDRESS; }
 });
 Object.defineProperty(exports, 'V3_QUOTER_ADDRESSES', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.V3_QUOTER_ADDRESSES; }
+  get: function () { return chunkQ2HOBH3Y_js.V3_QUOTER_ADDRESSES; }
 });
 Object.defineProperty(exports, 'getStableSwapPools', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.getStableSwapPools; }
+  get: function () { return chunkQ2HOBH3Y_js.getStableSwapPools; }
 });
 Object.defineProperty(exports, 'isStableSwapSupported', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.isStableSwapSupported; }
+  get: function () { return chunkQ2HOBH3Y_js.isStableSwapSupported; }
 });
 Object.defineProperty(exports, 'usdGasTokensByChain', {
   enumerable: true,
-  get: function () { return chunkLFBUJBCP_js.usdGasTokensByChain; }
+  get: function () { return chunkQ2HOBH3Y_js.usdGasTokensByChain; }
 });
 exports.PoolType = PoolType;
 exports.RouteType = RouteType;

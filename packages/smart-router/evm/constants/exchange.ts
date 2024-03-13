@@ -101,7 +101,7 @@ export const STABLE_SWAP_INFO_ADDRESS: ChainMap<string> = {
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.ETHEREUM]: [WNATIVE[ChainId.ETHEREUM], USDC[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM], WBTC_ETH],
   [ChainId.GOERLI]: [WNATIVE[ChainId.GOERLI], USDC[ChainId.GOERLI], BUSD[ChainId.GOERLI]],
-  [ChainId.BSC]: [bscTokens.czusd, bscTokens.wbnb, bscTokens.busd, bscTokens.usdt, bscTokens.usdc],
+  [ChainId.BSC]: [bscTokens.czusd, bscTokens.wbnb, bscTokens.usdt],
   [ChainId.BSC_TESTNET]: [bscTestnetTokens.wbnb, bscTestnetTokens.cake, bscTestnetTokens.busd],
   [ChainId.ARBITRUM_ONE]: [arbitrumTokens.weth, arbitrumTokens.usdt, arbitrumTokens.usdc],
   [ChainId.ARBITRUM_GOERLI]: [arbitrumGoerliTokens.weth, arbitrumGoerliTokens.usdc],
@@ -154,12 +154,14 @@ export const ADDITIONAL_BASES: {
     [bscTokens.mdlp.address]: [bscTokens.dlp],
     [bscTokens.dlp.address]: [bscTokens.mdlp],
 
+    [bscTokens.czusd.address]: [bscTokens.usdt],
+
     // pancakeswap/pancake-frontend#7909
     // LSDT
     '0xAa83Bb1Be2a74AaA8795a8887054919A0Ea96BFA': [czusd],
     // GEM
     '0x701F1ed50Aa5e784B8Fb89d1Ba05cCCd627839a7': [czusd],
-    // DOGD
+    // DGOD
     '0x99F4cc2BAE97F82A823CA80DcAe52EF972B7F270': [czusd],
   },
   [ChainId.ETHEREUM]: {

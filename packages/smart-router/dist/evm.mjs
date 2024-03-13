@@ -1,10 +1,10 @@
-import { __export, wrappedCurrency, BASES_TO_CHECK_TRADES_AGAINST, CUSTOM_BASES, ADDITIONAL_BASES, usdGasTokensByChain, pancakePairABI, stableSwapPairABI, getStableSwapPools, BASE_SWAP_COST_V3, COST_PER_HOP_V3, BASE_SWAP_COST_STABLE_SWAP, COST_PER_EXTRA_HOP_STABLE_SWAP, COST_PER_INIT_TICK, MIXED_ROUTE_QUOTER_ADDRESSES, V3_QUOTER_ADDRESSES, ADDRESS_THIS, MSG_SENDER, V2_FEE_PATH_PLACEHOLDER, BASE_SWAP_COST_V2, COST_PER_EXTRA_HOP_V2, COST_PER_UNINIT_TICK, BATCH_MULTICALL_CONFIGS } from './chunk-BN322AYN.mjs';
-export { ADDITIONAL_BASES, ADDRESS_THIS, BASES_TO_CHECK_TRADES_AGAINST, BASE_SWAP_COST_STABLE_SWAP, BASE_SWAP_COST_V2, BASE_SWAP_COST_V3, BATCH_MULTICALL_CONFIGS, BETTER_TRADE_LESS_HOPS_THRESHOLD, BIG_INT_TEN, BIPS_BASE, COST_PER_EXTRA_HOP_STABLE_SWAP, COST_PER_EXTRA_HOP_V2, COST_PER_HOP_V3, COST_PER_INIT_TICK, COST_PER_UNINIT_TICK, CUSTOM_BASES, MIN_BNB, MIXED_ROUTE_QUOTER_ADDRESSES, MSG_SENDER, SMART_ROUTER_ADDRESSES, STABLE_SWAP_INFO_ADDRESS, V2_FEE_PATH_PLACEHOLDER, V2_ROUTER_ADDRESS, V3_QUOTER_ADDRESSES, getStableSwapPools, isStableSwapSupported, usdGasTokensByChain } from './chunk-BN322AYN.mjs';
+import { __export, wrappedCurrency, BASES_TO_CHECK_TRADES_AGAINST, CUSTOM_BASES, ADDITIONAL_BASES, usdGasTokensByChain, pancakePairABI, stableSwapPairABI, getStableSwapPools, BASE_SWAP_COST_V3, COST_PER_HOP_V3, BASE_SWAP_COST_STABLE_SWAP, COST_PER_EXTRA_HOP_STABLE_SWAP, COST_PER_INIT_TICK, MIXED_ROUTE_QUOTER_ADDRESSES, V3_QUOTER_ADDRESSES, ADDRESS_THIS, MSG_SENDER, V2_FEE_PATH_PLACEHOLDER, BASE_SWAP_COST_V2, COST_PER_EXTRA_HOP_V2, COST_PER_UNINIT_TICK, BATCH_MULTICALL_CONFIGS } from './chunk-ZZCGH4AM.mjs';
+export { ADDITIONAL_BASES, ADDRESS_THIS, BASES_TO_CHECK_TRADES_AGAINST, BASE_SWAP_COST_STABLE_SWAP, BASE_SWAP_COST_V2, BASE_SWAP_COST_V3, BATCH_MULTICALL_CONFIGS, BETTER_TRADE_LESS_HOPS_THRESHOLD, BIG_INT_TEN, BIPS_BASE, COST_PER_EXTRA_HOP_STABLE_SWAP, COST_PER_EXTRA_HOP_V2, COST_PER_HOP_V3, COST_PER_INIT_TICK, COST_PER_UNINIT_TICK, CUSTOM_BASES, MIN_BNB, MIXED_ROUTE_QUOTER_ADDRESSES, MSG_SENDER, SMART_ROUTER_ADDRESSES, STABLE_SWAP_INFO_ADDRESS, V2_FEE_PATH_PLACEHOLDER, V2_ROUTER_ADDRESS, V3_QUOTER_ADDRESSES, getStableSwapPools, isStableSwapSupported, usdGasTokensByChain } from './chunk-ZZCGH4AM.mjs';
 import { ZERO, ONE, CurrencyAmount, Percent, ONE_HUNDRED_PERCENT, Pair, Price, TradeType, Fraction, Native, ERC20Token, WNATIVE, Token, validateAndParseAddress } from '@pancakeswap/sdk';
 import invariant5 from 'tiny-invariant';
 import { ChainId, getLlamaChainName } from '@pancakeswap/chains';
-import { getTokensByChain, bscTokens } from '@pancakeswap/tokens';
 import { GAUGES_CONFIG, GaugeType } from '@pancakeswap/gauges';
+import { getTokensByChain, bscTokens } from '@pancakeswap/tokens';
 import flatMap from 'lodash/flatMap.js';
 import memoize2 from 'lodash/memoize.js';
 import uniqBy from 'lodash/uniqBy.js';
@@ -926,6 +926,12 @@ function getBestRouteCombinationByQuotes(amount, quoteCurrency, routesWithQuote,
     }
     percentToQuotes[routeWithQuote.percent].push(routeWithQuote);
   }
+  console.log("tradeType", tradeType);
+  console.log("percentToQuotes", percentToQuotes);
+  console.log(
+    "percents",
+    percents.sort((a, b) => a - b)
+  );
   const swapRoute = getBestSwapRouteBy(
     tradeType,
     percentToQuotes,
@@ -934,6 +940,7 @@ function getBestRouteCombinationByQuotes(amount, quoteCurrency, routesWithQuote,
     (rq) => rq.quoteAdjustedForGas,
     config
   );
+  console.log("swapRoute", swapRoute);
   if (!swapRoute) {
     return null;
   }

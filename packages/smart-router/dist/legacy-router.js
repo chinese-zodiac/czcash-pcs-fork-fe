@@ -1,6 +1,6 @@
 'use strict';
 
-var chunkLFBUJBCP_js = require('./chunk-LFBUJBCP.js');
+var chunkQ2HOBH3Y_js = require('./chunk-Q2HOBH3Y.js');
 var flatMap = require('lodash/flatMap.js');
 var sdk = require('@pancakeswap/sdk');
 var tokenLists = require('@pancakeswap/token-lists');
@@ -23,7 +23,7 @@ var RouteType = /* @__PURE__ */ ((RouteType2) => {
 
 // legacy-router/legacyRouter.ts
 var legacyRouter_exports = {};
-chunkLFBUJBCP_js.__export(legacyRouter_exports, {
+chunkQ2HOBH3Y_js.__export(legacyRouter_exports, {
   createStableSwapPair: () => createStableSwapPair,
   getAllCommonPairs: () => getAllCommonPairs,
   getBestTradeExactIn: () => getBestTradeExactIn,
@@ -33,15 +33,15 @@ chunkLFBUJBCP_js.__export(legacyRouter_exports, {
 });
 async function getPairs(currencyPairs, { provider, chainId }) {
   const tokens = currencyPairs.map(([currencyA, currencyB]) => [
-    chunkLFBUJBCP_js.wrappedCurrency(currencyA, chainId),
-    chunkLFBUJBCP_js.wrappedCurrency(currencyB, chainId)
+    chunkQ2HOBH3Y_js.wrappedCurrency(currencyA, chainId),
+    chunkQ2HOBH3Y_js.wrappedCurrency(currencyB, chainId)
   ]);
   const pairAddresses = tokens.map(getPairAddress);
   const client = provider({ chainId });
   const results = await client.multicall({
     contracts: pairAddresses.map(
       (address) => ({
-        abi: chunkLFBUJBCP_js.pancakePairABI,
+        abi: chunkQ2HOBH3Y_js.pancakePairABI,
         address,
         functionName: "getReserves"
       })
@@ -94,7 +94,7 @@ function isStableSwapPair(pair) {
 
 // legacy-router/onchain/getStableSwapOutputAmount.ts
 async function getStableSwapOutputAmount(pair, inputAmount, { provider }) {
-  const wrappedInputAmount = chunkLFBUJBCP_js.wrappedCurrencyAmount(inputAmount, inputAmount.currency.chainId);
+  const wrappedInputAmount = chunkQ2HOBH3Y_js.wrappedCurrencyAmount(inputAmount, inputAmount.currency.chainId);
   if (!wrappedInputAmount) {
     throw new Error(`No wrapped token amount found for input amount: ${inputAmount.currency.name}`);
   }
@@ -108,7 +108,7 @@ async function getStableSwapOutputAmount(pair, inputAmount, { provider }) {
   const [result] = await client.multicall({
     contracts: [
       {
-        abi: chunkLFBUJBCP_js.stableSwapPairABI,
+        abi: chunkQ2HOBH3Y_js.stableSwapPairABI,
         address: pair.stableSwapAddress,
         functionName: "get_dy",
         args
@@ -458,7 +458,7 @@ var infoStableSwapABI = [
 // legacy-router/onchain/getStableSwapFee.ts
 function getStableSwapFeeCall(pair, inputAmount) {
   const { chainId } = inputAmount.currency;
-  const wrappedInputAmount = chunkLFBUJBCP_js.wrappedCurrencyAmount(inputAmount, chainId);
+  const wrappedInputAmount = chunkQ2HOBH3Y_js.wrappedCurrencyAmount(inputAmount, chainId);
   if (!wrappedInputAmount) {
     throw new Error(`No wrapped token amount found for input amount: ${inputAmount.currency.name}`);
   }
@@ -470,7 +470,7 @@ function getStableSwapFeeCall(pair, inputAmount) {
   const args = isOutputToken0 ? [stableSwapAddress, 1n, 0n, inputRawAmount] : [stableSwapAddress, 0n, 1n, inputRawAmount];
   return {
     abi: infoStableSwapABI,
-    address: pair.infoStableSwapAddress || chunkLFBUJBCP_js.STABLE_SWAP_INFO_ADDRESS[chainId],
+    address: pair.infoStableSwapAddress || chunkQ2HOBH3Y_js.STABLE_SWAP_INFO_ADDRESS[chainId],
     functionName: "get_exchange_fee",
     args
   };
@@ -496,10 +496,10 @@ async function getAllCommonPairs(currencyA, currencyB, { provider }) {
   if (!chainId || chainId !== currencyB.chainId) {
     return [];
   }
-  const [tokenA, tokenB] = chainId ? [chunkLFBUJBCP_js.wrappedCurrency(currencyA, chainId), chunkLFBUJBCP_js.wrappedCurrency(currencyB, chainId)] : [void 0, void 0];
-  const common = chunkLFBUJBCP_js.BASES_TO_CHECK_TRADES_AGAINST[chainId] ?? [];
-  const additionalA = tokenA ? chunkLFBUJBCP_js.ADDITIONAL_BASES[chainId]?.[tokenA.address] ?? [] : [];
-  const additionalB = tokenB ? chunkLFBUJBCP_js.ADDITIONAL_BASES[chainId]?.[tokenB.address] ?? [] : [];
+  const [tokenA, tokenB] = chainId ? [chunkQ2HOBH3Y_js.wrappedCurrency(currencyA, chainId), chunkQ2HOBH3Y_js.wrappedCurrency(currencyB, chainId)] : [void 0, void 0];
+  const common = chunkQ2HOBH3Y_js.BASES_TO_CHECK_TRADES_AGAINST[chainId] ?? [];
+  const additionalA = tokenA ? chunkQ2HOBH3Y_js.ADDITIONAL_BASES[chainId]?.[tokenA.address] ?? [] : [];
+  const additionalB = tokenB ? chunkQ2HOBH3Y_js.ADDITIONAL_BASES[chainId]?.[tokenB.address] ?? [] : [];
   const bases = [...common, ...additionalA, ...additionalB];
   const basePairs = flatMap__default.default(
     bases,
@@ -527,7 +527,7 @@ var getAllPairCombinations = (tokenA, tokenB, bases, basePairs, chainId) => {
   ].filter((tokens) => Boolean(tokens[0] && tokens[1])).filter(([t0, t1]) => t0.address !== t1.address).filter(([tokenA_, tokenB_]) => {
     if (!chainId)
       return true;
-    const customBases = chunkLFBUJBCP_js.CUSTOM_BASES[chainId];
+    const customBases = chunkQ2HOBH3Y_js.CUSTOM_BASES[chainId];
     const customBasesA = customBases?.[tokenA_.address];
     const customBasesB = customBases?.[tokenB_.address];
     if (!customBasesA && !customBasesB)
@@ -622,7 +622,7 @@ function getFeePercent(inputAmount, outputAmount, { fee, adminFee }) {
 
 // legacy-router/getStableSwapPairs.ts
 function getStableSwapPairs(chainId) {
-  const pools = chunkLFBUJBCP_js.getStableSwapPools(chainId);
+  const pools = chunkQ2HOBH3Y_js.getStableSwapPools(chainId);
   return pools.map(
     ({
       token: serializedToken,
@@ -653,7 +653,7 @@ function getStableSwapPairs(chainId) {
   );
 }
 var stableSwapPairsByChainId = fromPairs___default.default(
-  chunkLFBUJBCP_js.STABLE_SUPPORTED_CHAIN_IDS.map((chainId) => [chainId, getStableSwapPairs(chainId)])
+  chunkQ2HOBH3Y_js.STABLE_SUPPORTED_CHAIN_IDS.map((chainId) => [chainId, getStableSwapPairs(chainId)])
 );
 
 // legacy-router/getBestTradeFromStablePools.ts
@@ -771,7 +771,7 @@ function createGetBestTradeFromV2(tradeType) {
         maxHops: i,
         maxNumResults: 1
       })[0] ?? null;
-      if (sdk.isTradeBetter(bestTradeSoFar, currentTrade, chunkLFBUJBCP_js.BETTER_TRADE_LESS_HOPS_THRESHOLD)) {
+      if (sdk.isTradeBetter(bestTradeSoFar, currentTrade, chunkQ2HOBH3Y_js.BETTER_TRADE_LESS_HOPS_THRESHOLD)) {
         bestTradeSoFar = currentTrade;
       }
     }
