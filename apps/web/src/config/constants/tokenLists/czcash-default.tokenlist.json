@@ -665,6 +665,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x56b6fb708fc5732dec1afc8d8556423a2edccbd6.png"
+    },
+    {
+      "name": "Dojak",
+      "symbol": "DOJAK",
+      "address": "0xD108a90656DB772dE8329Fb61e3C3846D063997B",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://dweb.link/ipfs/bafkreifitkhds6xzmtyqp67ofxrinsyzcx4tbsfj5siobzjao332beoxl4"
     }
   ]
 }
