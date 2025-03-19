@@ -31,8 +31,9 @@
       "not op_mini all"
     ]
   },
+  "packageManager": "pnpm@8.15.9",
   "engines": {
-    "node": ">=16.0.0"
+    "node": "20.x"
   },
   "dependencies": {
     "@binance/w3w-utils": "1.1.4",
