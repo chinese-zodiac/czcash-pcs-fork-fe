@@ -24,6 +24,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 
 import { useDataDogRUM } from 'hooks/useDataDogRUM'
 import { useLoadExperimentalFeatures } from 'hooks/useExperimentalFeatureEnabled'
+import { usePostHog } from 'hooks/usePostHog'
 import { useInitGlobalWorker } from 'hooks/useWorker'
 import { persistor, useStore } from 'state'
 import { usePollBlockNumber } from 'state/block/hooks'
@@ -44,6 +45,7 @@ BigNumber.config({
 function GlobalHooks() {
   useInitGlobalWorker()
   useDataDogRUM()
+  usePostHog()
   useLoadExperimentalFeatures()
   usePollBlockNumber()
   useEagerConnect()
@@ -57,6 +59,7 @@ function GlobalHooks() {
 
 function MPGlobalHooks() {
   usePollBlockNumber()
+  usePostHog()
   useEagerConnectMP()
   useUserAgent()
   useAccountEventListener()
