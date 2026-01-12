@@ -12,3 +12,6 @@ services:
         value: 8.15.9
       - key: NODE_ENV
         value: production
+      # PostHog Analytics - get your key at https://app.posthog.com
+      - key: NEXT_PUBLIC_POSTHOG_KEY
+        sync: false  # Set in Render dashboard

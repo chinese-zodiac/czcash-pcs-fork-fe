@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import { useAccount } from 'wagmi'
-import { initPostHog, identifyWallet, resetUser, trackPageView } from '../utils/posthog'
+import { identifyWallet, initPostHog, resetUser, trackPageView } from '../utils/posthog'
 
 export function usePostHog() {
   const router = useRouter()
