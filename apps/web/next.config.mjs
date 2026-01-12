@@ -159,11 +159,6 @@ const config = {
         destination: 'https://farms-api.pancakeswap.com/v3/:chainId/liquidity/:address',
         permanent: false,
       },
-      {
-        source: '/images/tokens/:address',
-        destination: 'https://pancakeswap.finance/images/tokens/:address',
-        permanent: false,
-      },
     ]
   },
   webpack: (webpackConfig, { webpack, isServer }) => {
