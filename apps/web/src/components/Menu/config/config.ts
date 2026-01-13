@@ -63,7 +63,7 @@ const config: (
     },
     {
       label: t('Earn'),
-      href: '/farms',
+      href: '',
       icon: EarnIcon,
       fillIcon: EarnFillIcon,
       image: '/images/decorations/pe2.png',
@@ -84,7 +84,7 @@ const config: (
       items: [
         {
           label: t('Bandit Heist'),
-          href: 'https://banditheist.prpg.quest/',
+          href: 'https://banditheist.cz.cash/',
           type: DropdownMenuItemType.EXTERNAL_LINK,
         },
       ].map((item) => addMenuItemSupported(item, chainId)),
