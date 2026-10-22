@@ -1,1 +1,3 @@
 * text=auto eol=lf
+# Unified patch context retains blank-line markers, not source whitespace.
+patches/swiper@11.0.5.patch -whitespace
