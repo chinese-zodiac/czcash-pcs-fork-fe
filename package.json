@@ -43,7 +43,7 @@
     "prepare": "husky install || true"
   },
   "engines": {
-    "node": "20.x"
+    "node": "24.x"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",

@@ -1,0 +1,20 @@
+.git
+node_modules
+**/node_modules
+.next
+**/.next
+.turbo
+**/.turbo
+.env
+.env.*
+**/.env
+**/.env.*
+*.log
+*.key
+*.pem
+*.p12
+
+# Tracked defaults contain public configuration and build flags.
+# Private and local dotenv files remain excluded.
+!apps/web/.env
+!apps/web/.env.production
