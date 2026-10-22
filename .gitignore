@@ -56,3 +56,7 @@ scripts/dev/**
 
 # typescript
 *.tsbuildinfo
+
+# Local package-manager cache must not enter Git or the production image.
+.pnpm-store/
+**/.pnpm-store/

@@ -123,3 +123,28 @@ build. The two tracked web dotenv defaults are retained; local/private dotenv
 files, keys, Git metadata and host dependencies are excluded. No dependency
 versions or application behavior change. Node 24 requires the `with` JSON
 import attribute in `next.config.mjs`.
+
+## Conditional dependency security patches (October 2026)
+
+The Node runtime update is separate from these legacy dependency fixes. Pnpm
+overrides raise elliptic to 6.6.1, sha.js to 2.4.12 and form-data to 3.0.5/4.0.6
+within their existing major lines. The existing Ledger patch is preserved.
+Swiper 11.0.5 receives the upstream forbidden-key filter fix from commit
+`d3e663322a13043ca63aaba235d8cf3900e0c8cf` through a pnpm patch covering all 12
+retained distribution copies, preserving the current wallet-modal UI API.
+
+Run `node scripts/test_security_dependency_patches.mjs` in the built image.
+It checks the actual ethers-resolved elliptic with RFC6979 vectors and nonce
+input regressions, wallet recovery through independent viem, hash vectors and
+malformed inputs, multipart randomness/header escaping, and the Swiper
+prototype attack in six ESM/browser distribution variants. These fixtures
+use public known keys and no RPC, wallet, or application credentials.
+
+The monorepo audit includes 33 workspace importers. Version-based audit output
+still flags the backported Swiper and Next copies in ancillary workspaces.
+The serving app is Next 13.5.11 (middleware advisory already fixed), on Linux
+(Windows advisory does not apply), with no Sharp/libheif/libvips installed
+(the AVIF advisory's native path is absent). These are scoped findings, not
+a claim that every legacy high advisory is fixed; broader framework/SDK
+maintenance remains separately tracked. Do not remove the patches or add
+native image optimizers without reevaluating those advisories.

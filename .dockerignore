@@ -18,3 +18,7 @@ node_modules
 # Private and local dotenv files remain excluded.
 !apps/web/.env
 !apps/web/.env.production
+
+# Local package-manager cache must not enter Git or the production image.
+.pnpm-store/
+**/.pnpm-store/
