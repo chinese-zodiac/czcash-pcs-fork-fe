@@ -108,3 +108,18 @@ pnpm build:games
 | [smart-router](/packages/smart-router)     | An SDK for getting best trade routes.                                                                       |
 | [multicall](/packages/multicall)           | Enhanced multicall sdk to safely make multicalls within the gas limit.                                      |
 | [v3-sdk](/packages/v3-sdk)                 | An SDK for building applications on top of Pancakeswap V3.                                                  |
+
+## Production runtime
+
+The root Dockerfile pins Node 24.22.1 Bookworm by digest and pnpm 8.15.9.
+Build from the repository root and run the existing Next.js SSR server on
+`PORT` (default 3000); the final process runs as the Node user. The image
+healthcheck verifies the patched Node 24 floor and an HTTP response from `/`.
+
+Coolify must use the Dockerfile build pack and preserve the application's
+existing build-time and runtime variables. Its `inject_build_args_to_dockerfile`
+setting is enabled, so build-time `NEXT_PUBLIC_*` values reach the Next.js
+build. The two tracked web dotenv defaults are retained; local/private dotenv
+files, keys, Git metadata and host dependencies are excluded. No dependency
+versions or application behavior change. Node 24 requires the `with` JSON
+import attribute in `next.config.mjs`.
