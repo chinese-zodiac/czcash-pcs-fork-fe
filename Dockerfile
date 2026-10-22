@@ -14,7 +14,8 @@ RUN pnpm build
 FROM base
 WORKDIR /app
 COPY --from=build /usr/local/lib/node_modules/pnpm /usr/local/lib/node_modules/pnpm
-COPY --from=build /usr/local/bin/pnpm /usr/local/bin/pnpx /usr/local/bin/
+RUN ln -s ../lib/node_modules/pnpm/bin/pnpm.cjs /usr/local/bin/pnpm \
+ && ln -s ../lib/node_modules/pnpm/bin/pnpx.cjs /usr/local/bin/pnpx
 COPY --from=build --chown=node:node /app /app
 ENV NODE_ENV=production PORT=3000
 USER node
