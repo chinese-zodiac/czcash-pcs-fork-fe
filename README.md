@@ -141,10 +141,9 @@ prototype attack in six ESM/browser distribution variants. These fixtures
 use public known keys and no RPC, wallet, or application credentials.
 
 The monorepo audit includes 33 workspace importers. Version-based audit output
-still flags the backported Swiper and Next copies in ancillary workspaces.
-The serving app is Next 13.5.11 (middleware advisory already fixed), on Linux
-(Windows advisory does not apply), with no Sharp/libheif/libvips installed
-(the AVIF advisory's native path is absent). These are scoped findings, not
-a claim that every legacy high advisory is fixed; broader framework/SDK
-maintenance remains separately tracked. Do not remove the patches or add
-native image optimizers without reevaluating those advisories.
+still flags the backported Swiper version. The serving app and ancillary
+Next.js workspaces now use Next 15.5.28 with Sentry 8.55.0; see
+[the compatibility update and validation limits](doc/Next15-security-upgrade.md).
+These are scoped findings, not a claim that every legacy high advisory is
+fixed. Do not remove the patches or add native image optimizers without
+reevaluating those advisories.
