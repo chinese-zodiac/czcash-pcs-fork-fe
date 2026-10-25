@@ -52,6 +52,7 @@ const config = {
   },
   experimental: {
     scrollRestoration: true,
+    fallbackNodePolyfills: false,
     optimizePackageImports: ['@pancakeswap/widgets-internal', '@pancakeswap/uikit'],
   },
   // These options are stable top-level fields in Next 15.
