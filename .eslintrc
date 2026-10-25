@@ -5,6 +5,13 @@
   },
   "plugins": ["lodash", "address"],
   "extends": ["@pancakeswap/eslint-config-pancake", "plugin:react/jsx-runtime"],
+  "overrides": [
+    {
+      // Next.js generates the route-type reference in these declaration files.
+      "files": ["**/next-env.d.ts"],
+      "rules": { "@typescript-eslint/triple-slash-reference": "off" }
+    }
+  ],
   "rules": {
     "address/addr-type": ["warn", "checksum"],
     "no-empty-function": 0,

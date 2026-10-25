@@ -8,7 +8,11 @@ export type NextMiddleware = (
 
 export type MiddlewareFactory = (middleware: NextMiddleware) => NextMiddleware
 
+// Optional fields supplied by the existing hosting adapter, not trusted headers.
+// Next 15 removed them from NextRequest; keep the current policy input contract.
 export interface ExtendedNextReq extends NextRequest {
+  geo?: { country?: string; region?: string }
+  ip?: string
   userIp?: string | null
   clientId?: string | undefined
 }

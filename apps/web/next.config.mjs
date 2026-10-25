@@ -53,11 +53,12 @@ const config = {
   experimental: {
     scrollRestoration: true,
     fallbackNodePolyfills: false,
-    outputFileTracingRoot: path.join(__dirname, '../../'),
-    outputFileTracingExcludes: {
-      '*': [],
-    },
     optimizePackageImports: ['@pancakeswap/widgets-internal', '@pancakeswap/uikit'],
+  },
+  // These options are stable top-level fields in Next 15.
+  outputFileTracingRoot: path.join(__dirname, '../../'),
+  outputFileTracingExcludes: {
+    '*': [],
   },
   transpilePackages: [
     '@pancakeswap/farms',
@@ -69,7 +70,6 @@ const config = {
     '@pancakeswap/ifos',
   ],
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     contentDispositionType: 'attachment',
     remotePatterns: [
@@ -189,5 +189,8 @@ const config = {
 }
 
 export default withBundleAnalyzer(
-  withVanillaExtract(withSentryConfig(withWebSecurityHeaders(config)), sentryWebpackPluginOptions),
+  withVanillaExtract(
+    withSentryConfig(withWebSecurityHeaders(config), { telemetry: false }),
+    sentryWebpackPluginOptions,
+  ),
 )
